@@ -5,7 +5,10 @@ export default Ember.Controller.extend({
     const user = this.store.createRecord(`end-user`, attrs);
 
     user.save().then(() => {
-      // this.transitionToRoute(`login`);
+      this.transitionToRoute(`login`);
+      console.log(`registered`);
+    }).catch((err) => {
+      console.log(err);
     });
   },
 });
