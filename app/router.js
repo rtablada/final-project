@@ -13,7 +13,6 @@ Router.map(function() {
     path: '/',
   }, function () {
     this.route('users');
-    this.route('register');
   });
 });
 
