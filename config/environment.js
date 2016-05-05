@@ -15,6 +15,11 @@ module.exports = function(environment) {
       }
     },
 
+    'ember-simple-auth': {
+      routeIfAlreadyAuthenticated: `admin`,
+      routeAfterAuthentication: `admin`,
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
