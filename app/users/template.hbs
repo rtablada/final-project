@@ -1,0 +1,7 @@
+<ul>
+  {{#each model as |user|}}
+    <li>{{user.username}}</li>
+    <li>{{user.email}}</li>
+    <li><a href="#" {{action deleteUser user}}>Delete this user</a></li>
+  {{/each}}
+</ul>
