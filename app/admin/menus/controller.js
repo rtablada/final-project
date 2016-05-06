@@ -12,8 +12,4 @@ export default Ember.Controller.extend({
       console.log(err);
     });
   },
-
-  deleteMenu(menu) {
-    menu.destroyRecord();
-  },
 });

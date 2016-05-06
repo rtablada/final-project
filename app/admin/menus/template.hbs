@@ -14,12 +14,13 @@
   <ul>
     <button {{action toggleProperty "newMenu"}}>Add Menu</button>
     {{#each model as |menu|}}
-    {{log menu}}
       <li>
-        {{menu.name}}
-        <a href="#" {{action deleteMenu menu}}>Delete</a>
+        {{#link-to "admin.menus.menu" menu}}
+          {{menu.name}}
+        {{/link-to}}
       </li>
     {{/each}}
   </ul>
 
 {{/if}}
+{{outlet}}

@@ -14,7 +14,9 @@ Router.map(function() {
   }, function () {
     this.route('users');
     this.route('menus', function() {
-      this.route('new');
+      this.route('menu', {
+        path: '/:menu_id'
+      });
     });
   });
 });
