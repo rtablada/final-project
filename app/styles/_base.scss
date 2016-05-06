@@ -1,0 +1,25 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 60rem;
+  margin: auto;
+}
+
+.form-input {
+  width: 100%;
+  margin: 0;
+  padding: $gutter / 2;
+  border: 1px solid black;
+}
