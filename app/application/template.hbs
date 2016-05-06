@@ -1,11 +1,17 @@
-<nav>
-  {{#link-to "admin"}}Home{{/link-to}}
+<div class="app-wrapper">
+  <nav>
+    <div class="container">
+      <div class="nav-row">
+        {{#link-to "admin" class="nav-link"}}Home{{/link-to}}
 
-  {{#if session.isAuthenticated}}
-    {{#link-to "logout"}}Logout{{/link-to}}
-  {{else}}
-    {{#link-to "login"}}Login{{/link-to}}
-  {{/if}}
-</nav>
+        {{#if session.isAuthenticated}}
+          {{#link-to "logout" class="nav-link"}}Logout{{/link-to}}
+        {{else}}
+          {{#link-to "login" class="nav-link"}}Login{{/link-to}}
+        {{/if}}
+      </div>
+    </div>
+  </nav>
 
-{{outlet}}
+  {{outlet}}
+</div>

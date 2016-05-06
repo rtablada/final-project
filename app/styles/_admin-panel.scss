@@ -1,0 +1,33 @@
+.admin-panel {
+  flex-grow: 1;
+  background: $brand-lighgrey;
+}
+
+.admin-row__top {
+
+  .greeting {
+    margin: 0 $gutter;
+    color: $brand-white;
+  }
+}
+
+.admin-row__main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .options {
+    display: flex;
+
+    &-title {
+      color: $brand-white;
+      text-align: center;
+    }
+  }
+
+  .list-icon {
+    margin: $gutter;
+    color: $brand-white;
+    font-size: 10rem;
+  }
+}
