@@ -1,33 +1,37 @@
-{{#if newUser}}
+<div class="admin-panel">
+  <div class="container">
+    {{#if newUser}}
 
-  {{#simple-form onsubmit=(action createNewUser) as |formValues|}}
-    <p>
-      <label>User Name</label>
-      {{input type="text" name="username" value=formValues.username}}
-    </p>
-    <p>
-      <label>E-mail</label>
-      {{input type="text" name="email" value=formValues.email}}
-    </p>
-    <p>
-      <label>Password</label>
-      {{input type="password" name="password" value=formValues.password}}
-    </p>
-    <button>Register</button>
-    <button {{action toggleProperty "newUser"}}>Cancel</button>
-  {{/simple-form}}
+      {{#simple-form onsubmit=(action createNewUser) as |formValues|}}
+        <p>
+          <label>User Name</label>
+          {{input type="text" name="username" value=formValues.username}}
+        </p>
+        <p>
+          <label>E-mail</label>
+          {{input type="text" name="email" value=formValues.email}}
+        </p>
+        <p>
+          <label>Password</label>
+          {{input type="password" name="password" value=formValues.password}}
+        </p>
+        <button>Register</button>
+        <button {{action toggleProperty "newUser"}}>Cancel</button>
+      {{/simple-form}}
 
-{{else}}
+    {{else}}
 
-  <ul>
-    <button {{action toggleProperty "newUser"}}>Add User</button>
-    {{#each model as |user|}}
-      <li>{{user.username}}</li>
-      <li>
-        {{user.email}}
-        {{!-- <a href="#" {{action deleteUser user}}>Remove</a> --}}
-      </li>
-    {{/each}}
-  </ul>
+      <ul>
+        <button {{action toggleProperty "newUser"}}>Add User</button>
+        {{#each model as |user|}}
+          <li>{{user.username}}</li>
+          <li>
+            {{user.email}}
+            {{!-- <a href="#" {{action deleteUser user}}>Remove</a> --}}
+          </li>
+        {{/each}}
+      </ul>
 
-{{/if}}
+    {{/if}}
+  </div>
+</div>
