@@ -2,8 +2,8 @@
 
   {{#simple-form onsubmit=(action createNewMenu) as |formValues|}}
     <p>
-      <label>Menu Name</label>
-      {{input type="text" name="image" value=formValues.menu}}
+      <label>New Menu</label>
+      {{input type="text" name="name" value=formValues.name}}
     </p>
     <button>Add Menu</button>
     <button {{action toggleProperty "newMenu"}}>Cancel</button>
@@ -14,8 +14,11 @@
   <ul>
     <button {{action toggleProperty "newMenu"}}>Add Menu</button>
     {{#each model as |menu|}}
-      <li>{{menu.title}}</li>
-      <li><a href="#" {{action deleteMenu menu}}>Delete this user</a></li>
+    {{log menu}}
+      <li>
+        {{menu.name}}
+        <a href="#" {{action deleteMenu menu}}>Delete</a>
+      </li>
     {{/each}}
   </ul>
 

@@ -23,8 +23,10 @@
     <button {{action toggleProperty "newUser"}}>Add User</button>
     {{#each model as |user|}}
       <li>{{user.username}}</li>
-      <li>{{user.email}}</li>
-      <li><a href="#" {{action deleteUser user}}>Delete this user</a></li>
+      <li>
+        {{user.email}}
+        <a href="#" {{action deleteUser user}}>Remove</a>
+      </li>
     {{/each}}
   </ul>
 
