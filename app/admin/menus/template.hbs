@@ -1,1 +1,22 @@
-<h1>Menus</h1>
+{{#if newMenu}}
+
+  {{#simple-form onsubmit=(action createNewMenu) as |formValues|}}
+    <p>
+      <label>Menu Name</label>
+      {{input type="text" name="image" value=formValues.menu}}
+    </p>
+    <button>Add Menu</button>
+    <button {{action toggleProperty "newMenu"}}>Cancel</button>
+  {{/simple-form}}
+
+{{else}}
+
+  <ul>
+    <button {{action toggleProperty "newMenu"}}>Add Menu</button>
+    {{#each model as |menu|}}
+      <li>{{menu.title}}</li>
+      <li><a href="#" {{action deleteMenu menu}}>Delete this user</a></li>
+    {{/each}}
+  </ul>
+
+{{/if}}
