@@ -1,3 +1,46 @@
 <h1>{{model.name}}</h1>
 <a href="#" {{action deleteMenu model}}>Delete</a>
 {{#link-to "admin.menus"}}Back{{/link-to}}
+
+{{#if newItem}}
+
+  {{#simple-form onsubmit=(action createNewItem) as |formValues|}}
+    <p>
+      <label>Image</label>
+      {{input type="text" name="image" value=formValues.image}}
+    </p>
+    <p>
+      <label>Title</label>
+      {{input type="text" name="title" value=formValues.title}}
+    </p>
+    <p>
+      <label>Description</label>
+      {{input type="textarea" name="description" value=formValues.description}}
+    </p>
+    <p>
+      <label>Steps</label>
+
+    </p>
+    <p>
+      <label>Safe for Allergens:</label>
+
+    </p>
+    <button>Add Item</button>
+    <button {{action toggleProperty "newItem"}}>Cancel</button>
+  {{/simple-form}}
+
+{{else}}
+
+  <ul>
+    <button {{action toggleProperty "newItem"}}>New Item</button>
+    <h1>Items:</h1>
+    {{#each model as |item|}}
+    {{log item.image}}
+      <img src="{{item.image}}" alt="">
+      <li>{{item.title}}</li>
+      <p>{{item.description}}</p>
+      <a href="#" {{action deleteItem item}}>Remove</a>
+    {{/each}}
+  </ul>
+
+{{/if}}

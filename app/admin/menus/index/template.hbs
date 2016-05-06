@@ -15,7 +15,7 @@
     <button {{action toggleProperty "newMenu"}}>Add Menu</button>
     {{#each model as |menu|}}
       <li>
-        {{#link-to "admin.menus.menu" menu}}
+        {{#link-to "admin.menus.menu" menu.id}}
           {{menu.name}}
         {{/link-to}}
       </li>
