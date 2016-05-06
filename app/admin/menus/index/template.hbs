@@ -1,0 +1,26 @@
+{{#if newMenu}}
+
+  {{#simple-form onsubmit=(action createNewMenu) as |formValues|}}
+    <p>
+      <label>New Menu</label>
+      {{input type="text" name="name" value=formValues.name}}
+    </p>
+    <button>Add Menu</button>
+    <button {{action toggleProperty "newMenu"}}>Cancel</button>
+  {{/simple-form}}
+
+{{else}}
+
+  <ul>
+    <button {{action toggleProperty "newMenu"}}>Add Menu</button>
+    {{#each model as |menu|}}
+      <li>
+        {{#link-to "admin.menus.menu" menu}}
+          {{menu.name}}
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+
+{{/if}}
+{{outlet}}

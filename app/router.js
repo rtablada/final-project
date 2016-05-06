@@ -13,7 +13,11 @@ Router.map(function() {
     path: '/',
   }, function () {
     this.route('users');
-    this.route('menus');
+    this.route('menus', function() {
+      this.route('menu', {
+        path: '/:menu_id'
+      });
+    });
   });
 });
 
