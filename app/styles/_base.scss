@@ -19,6 +19,7 @@ ul {
 
 h1, h2, h3, h4 {
   margin: 0;
+  font-weight: normal;
 }
 
 .container {
@@ -30,5 +31,5 @@ h1, h2, h3, h4 {
   width: 100%;
   margin: 0;
   padding: $gutter / 2;
-  border: 1px solid black;
+  border: 1px solid $brand-bluegrey;
 }

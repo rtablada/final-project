@@ -7,13 +7,27 @@
 
   .greeting {
     margin: 0 $gutter;
+    color: $brand-white;
   }
 }
 
 .admin-row__main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .options {
+    display: flex;
+
+    &-title {
+      color: $brand-white;
+      text-align: center;
+    }
+  }
 
   .list-icon {
     margin: $gutter;
-    font-size: 3rem;
+    color: $brand-white;
+    font-size: 10rem;
   }
 }
