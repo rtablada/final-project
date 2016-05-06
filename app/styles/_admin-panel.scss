@@ -1,0 +1,19 @@
+.admin-panel {
+  flex-grow: 1;
+  background: $brand-lighgrey;
+}
+
+.admin-row__top {
+
+  .greeting {
+    margin: 0 $gutter;
+  }
+}
+
+.admin-row__main {
+
+  .list-icon {
+    margin: $gutter;
+    font-size: 3rem;
+  }
+}

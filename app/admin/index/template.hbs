@@ -1,5 +1,13 @@
-<h3>
-  Hello {{session.session.content.authenticated.user.username}}
-</h3>
-{{#link-to "admin.users"}}Current Users{{/link-to}}
-{{#link-to "admin.menus"}}Menus{{/link-to}}
+<div class="admin-panel">
+  <div class="container">
+    <div class="admin-row__top">
+      <h3 class="greeting">
+        Hello {{session.session.content.authenticated.user.username}}
+      </h3>
+    </div>
+    <div class="admin-row__main">
+      {{#link-to "admin.users" class="list-icon"}}{{fa-icon "users"}}{{/link-to}}
+      {{#link-to "admin.menus" class="list-icon"}}{{fa-icon "glass"}}{{/link-to}}
+    </div>
+  </div>
+</div>
