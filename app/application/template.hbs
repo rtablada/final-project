@@ -2,12 +2,12 @@
   <nav>
     <div class="container">
       <div class="nav-row">
-        {{#link-to "admin" class="nav-link"}}{{fa-icon "home"}}{{/link-to}}
-
+        <span>{{#link-to "admin" class="nav-link"}}{{fa-icon "home"}}{{/link-to}}</span>
+        <span>{{#link-to "admin" class="nav-link fobie"}}FOHBI{{/link-to}}</span>
         {{#if session.isAuthenticated}}
-          {{#link-to "logout" class="nav-link"}}Logout{{/link-to}}
+          {{#link-to "logout" class="nav-link"}}{{fa-icon "sign-out"}}{{/link-to}}
         {{else}}
-          {{#link-to "login" class="nav-link"}}Login{{/link-to}}
+          {{#link-to "login" class="nav-link"}}{{fa-icon "sign-in"}}{{/link-to}}
         {{/if}}
       </div>
     </div>

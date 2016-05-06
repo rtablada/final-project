@@ -7,7 +7,7 @@
 
   .greeting {
     margin: 0 $gutter;
-    color: $brand-white;
+    color: $brand-bluegrey;
   }
 }
 
@@ -20,7 +20,7 @@
     display: flex;
 
     &-title {
-      color: $brand-white;
+      color: $brand-bluegrey;
       text-align: center;
     }
   }
