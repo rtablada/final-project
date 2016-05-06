@@ -1,7 +1,6 @@
 nav {
   width: 100%;
   background: $brand-bluegrey;
-  color: $brand-red;
   overflow: auto;
 }
 
@@ -13,4 +12,11 @@ nav {
 .nav-link {
   display: block;
   padding: $gutter;
+  color: $brand-lighgrey;
+  font-size: 2rem;
+}
+
+.fobie {
+  color: $brand-red;
+  font-weight: bolder;
 }

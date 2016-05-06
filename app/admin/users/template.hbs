@@ -22,7 +22,7 @@
     {{else}}
 
       <ul>
-        <button {{action toggleProperty "newUser"}}>Add User</button>
+        <button {{action toggleProperty "newUser"}}>{{fa-icon "user-plus"}}</button>
         {{#each model as |user|}}
           <li>{{user.username}}</li>
           <li>
