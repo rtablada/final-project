@@ -27,9 +27,33 @@ h1, h2, h3, h4 {
   margin: auto;
 }
 
-.form-input {
-  width: 100%;
-  margin: 0;
-  padding: $gutter / 2;
-  border: 1px solid $brand-bluegrey;
+.form {
+
+  &-container {
+    max-width: 20rem;
+    margin: $gutter;
+
+    label {
+      color: $brand-bluegrey;
+    }
+
+    button {
+      padding: $gutter / 4 $gutter;
+      border: 0;
+      background: $brand-bluegrey;
+      color: $brand-lighgrey;
+      font-size: 1rem;
+    }
+  }
+
+  &-input {
+    width: 100%;
+    margin: 0;
+    padding: $gutter / 2;
+    border: 1px solid $brand-lighgrey;
+
+    &:focus {
+      outline: $brand-red auto 5px;
+    }
+  }
 }

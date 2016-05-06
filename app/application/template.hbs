@@ -2,7 +2,7 @@
   <nav>
     <div class="container">
       <div class="nav-row">
-        {{#link-to "admin" class="nav-link"}}Home{{/link-to}}
+        {{#link-to "admin" class="nav-link"}}{{fa-icon "home"}}{{/link-to}}
 
         {{#if session.isAuthenticated}}
           {{#link-to "logout" class="nav-link"}}Logout{{/link-to}}
