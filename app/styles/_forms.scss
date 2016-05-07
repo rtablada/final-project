@@ -9,11 +9,11 @@
     }
 
     button {
-      padding: $gutter / 4 $gutter;
       border: 0;
-      background: $brand-bluegrey;
-      color: $brand-lighgrey;
-      font-size: 1rem;
+      background: none;
+      color: $brand-yellow;
+      font-size: $brand-icon-size;
+      cursor: pointer;
     }
   }
 

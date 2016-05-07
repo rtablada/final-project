@@ -11,11 +11,25 @@ nav {
   justify-content: space-between;
 }
 
+.nav-link__container {
+  position: relative;
+}
+
 .nav-link {
   display: block;
+  position: relative;
   padding: $gutter;
   color: $brand-lighgrey;
   font-size: $brand-icon-size;
+}
+
+.nav-link__text {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  color: $brand-red;
+  font-size: 0.6rem;
+  text-align: center;
 }
 
 .fobie {
