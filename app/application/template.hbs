@@ -3,11 +3,19 @@
     <div class="container">
       <div class="nav-row">
         <span>{{#link-to "admin" class="nav-link"}}{{fa-icon "home"}}{{/link-to}}</span>
-        <span>{{#link-to "admin" class="nav-link fobie"}}FOHBI{{/link-to}}</span>
+
+        <span>{{#link-to "admin" class="fobie"}}FOHBI{{/link-to}}</span>
+
         {{#if session.isAuthenticated}}
-          {{#link-to "logout" class="nav-link"}}{{fa-icon "sign-out"}}{{/link-to}}
+          <div class="nav-link__container">
+            <span class="nav-link">{{#link-to "logout"}}{{fa-icon "sign-out"}}{{/link-to}}</span>
+            <span class="nav-link__text">Log Out</span>
+          </div>
         {{else}}
-          {{#link-to "login" class="nav-link"}}{{fa-icon "sign-in"}}{{/link-to}}
+          <div class="nav-link__container">
+            <span class="nav-link">{{#link-to "login"}}{{fa-icon "sign-in"}}{{/link-to}}</span>
+            <span class="nav-link__text">Log In</span>
+          </div>
         {{/if}}
       </div>
     </div>

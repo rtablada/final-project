@@ -1,0 +1,30 @@
+.form {
+
+  &-container {
+    max-width: 20rem;
+    margin: $gutter;
+
+    label {
+      color: $brand-bluegrey;
+    }
+
+    button {
+      border: 0;
+      background: none;
+      color: $brand-yellow;
+      font-size: $brand-icon-size;
+      cursor: pointer;
+    }
+  }
+
+  &-input {
+    width: 100%;
+    margin: 0;
+    padding: $gutter / 2;
+    border: 1px solid $brand-lighgrey;
+
+    &:focus {
+      outline: $brand-green auto 5px;
+    }
+  }
+}

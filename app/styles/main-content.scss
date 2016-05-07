@@ -1,17 +1,26 @@
-.admin-panel {
+.main-content {
   flex-grow: 1;
+  padding-top: 4.6rem;
   background: $brand-lighgrey;
 }
 
-.admin-row__top {
+.main-row__top {
+
+  .add-button {
+    display: block;
+    padding: $gutter;
+    color: $brand-yellow;
+    font-size: $brand-icon-size;
+    cursor: pointer;
+  }
 
   .greeting {
     margin: 0 $gutter;
-    color: $brand-bluegrey;
+    color: $brand-yellow;
   }
 }
 
-.admin-row__main {
+.main-row {
   display: flex;
   justify-content: center;
   width: 100%;

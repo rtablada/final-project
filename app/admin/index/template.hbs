@@ -1,11 +1,11 @@
-<div class="admin-panel">
+<div class="main-content">
   <div class="container">
-    <div class="admin-row__top">
+    <div class="main-row__top">
       <h4 class="greeting">
         Hello, {{session.session.content.authenticated.user.username}}
       </h4>
     </div>
-    <div class="admin-row__main">
+    <div class="main-row">
       <ul class="options">
         <li>
           {{#link-to "admin.users" class="list-icon"}}{{fa-icon "users"}}{{/link-to}}

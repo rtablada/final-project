@@ -1,13 +1,16 @@
 @import "yoga";
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,300,600,700,800,900);
 
 // Uncomment this for working with yoga prototyping
 // http://rtablada.github.io/yoga-sass/#mixin-yoga-prototype
 // @include yoga-prototype();
 @import 'variables';
 @import 'base';
+@import 'forms';
 @import 'nav';
-@import 'admin-panel';
+@import 'main-content';
 @import 'login';
+@import 'users';
 
 .app-wrapper {
   display: flex;
