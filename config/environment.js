@@ -15,6 +15,10 @@ module.exports = function(environment) {
       }
     },
 
+    googleFonts: [
+      'Exo+2:100',
+    ],
+
     'ember-simple-auth': {
       routeIfAlreadyAuthenticated: `admin`,
       routeAfterAuthentication: `admin`,
