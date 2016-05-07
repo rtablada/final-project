@@ -1,8 +1,8 @@
-<div class="admin-panel">
+<div class="main-content">
   <div class="container">
     {{#if newUser}}
 
-      <div class="admin-row__main">
+      <div class="main-row">
         {{#simple-form onsubmit=(action createNewUser) as |formValues|}}
           <p>
             <label>User Name</label>
@@ -23,9 +23,11 @@
 
     {{else}}
 
-      <div class="admin-row__main">
+      <div class="main-row__top">
+        <span class="add-button" {{action toggleProperty "newUser"}}>{{fa-icon "user-plus"}}</span>
+      </div>
+      <div class="main-row">
         <ul>
-          <button {{action toggleProperty "newUser"}}>{{fa-icon "user-plus"}}</button>
           {{#each model as |user|}}
             <li>{{user.username}}</li>
             <li>

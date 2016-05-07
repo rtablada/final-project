@@ -6,6 +6,14 @@
 
 .main-row__top {
 
+  .add-button {
+    display: block;
+    padding: $gutter;
+    color: $brand-yellow;
+    font-size: $brand-icon-size;
+    cursor: pointer;
+  }
+
   .greeting {
     margin: 0 $gutter;
     color: $brand-yellow;
