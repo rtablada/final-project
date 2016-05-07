@@ -16,7 +16,8 @@ module.exports = function(environment) {
     },
 
     googleFonts: [
-      'Exo+2:100',
+      'Open+Sans:300',
+      'Exo+2:300'
     ],
 
     'ember-simple-auth': {
