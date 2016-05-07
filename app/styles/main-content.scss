@@ -1,9 +1,10 @@
-.admin-panel {
+.main-content {
   flex-grow: 1;
+  padding-top: 5rem;
   background: $brand-lighgrey;
 }
 
-.admin-row__top {
+.main-row__top {
 
   .greeting {
     margin: 0 $gutter;
@@ -11,7 +12,7 @@
   }
 }
 
-.admin-row__main {
+.main-row {
   display: flex;
   justify-content: center;
   width: 100%;
