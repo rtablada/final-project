@@ -27,4 +27,9 @@
       outline: $brand-green auto 5px;
     }
   }
+
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
 }
