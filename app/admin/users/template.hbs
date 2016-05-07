@@ -27,13 +27,20 @@
         <span class="add-button" {{action toggleProperty "newUser"}}>{{fa-icon "user-plus"}}</span>
       </div>
       <div class="main-row">
-        <ul>
+        <ul class="user-list">
           {{#each model as |user|}}
-            <li>{{user.username}}</li>
-            <li>
-              {{user.email}}
-              {{!-- <a href="#" {{action deleteUser user}}>Remove</a> --}}
-            </li>
+            <p class="user">
+              <li>{{user.username}}</li>
+              <li>
+                {{user.email}}
+              </li>
+              <li>
+                <div class="user-remove">
+                  <span class="user-remove__text"><a href="#" {{action deleteUser user}}>Remove</a></span>
+                  {{fa-icon "user-times"}}
+                </div>
+              </li>
+            </p>
           {{/each}}
         </ul>
       </div>

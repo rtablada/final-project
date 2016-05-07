@@ -1,0 +1,28 @@
+.user-list {
+  display: flex;
+  width: 100%;
+}
+
+.user {
+  flex-basis: 20rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: $gutter;
+  padding: $gutter;
+  border-radius: 6px;
+  background: $brand-bluegrey;
+  color: $brand-green;
+}
+
+.user-remove {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: $gutter;
+  color: $brand-yellow;
+  font-size: 0.6rem;
+
+  &__text {
+    margin-right: $gutter / 2;
+  }
+}
