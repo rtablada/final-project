@@ -21,6 +21,10 @@ nav {
   padding: $gutter;
   color: $brand-lighgrey;
   font-size: $brand-icon-size;
+
+  &:hover {
+    color: $brand-yellow;
+  }
 }
 
 .nav-link__text {
@@ -39,4 +43,8 @@ nav {
   font-family: $brand-font;
   font-size: 2rem;
   font-weight: 900;
+
+  &:hover {
+    color: darken($brand-green, 10%);
+  }
 }
