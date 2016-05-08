@@ -1,0 +1,15 @@
+.menu-option__row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.menu-option {
+  flex-basis: 20rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.menu-image {
+  width: 100%;
+}
