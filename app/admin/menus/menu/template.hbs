@@ -1,4 +1,5 @@
-<div class="main-content"><div class="container">
+<div class="main-content">
+  <div class="container">
     <h1>{{model.name}}</h1>
     <a href="#" {{action deleteMenu model}}>Delete</a>
     {{#link-to "admin.menus"}}Back{{/link-to}}
@@ -32,18 +33,19 @@
 
     {{else}}
 
-      <ul>
-        <button {{action toggleProperty "newItem"}}>New Item</button>
-        <h1>Items:</h1>
+      <button {{action toggleProperty "newItem"}}>New Item</button>
+      <h1>Items:</h1>
+      <ul class="menu-option__row">
         {{#each model.items as |item|}}
-        {{log item.image}}
-          <img src="{{item.image}}" alt="">
-          <li>{{item.title}}</li>
-          <p>{{item.description}}</p>
-          <a href="#" {{action deleteItem item}}>Remove</a>
+            <div class="menu-option">
+              <img class="menu-image" src="{{item.image}}" alt="">
+              <li>{{item.title}}</li>
+              <p>{{item.description}}</p>
+              <a href="#" {{action deleteItem item}}>Remove</a>
+            </div>
         {{/each}}
       </ul>
 
     {{/if}}
   </div>
-  </div>
+</div>

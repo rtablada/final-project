@@ -16,13 +16,11 @@
       <button {{action toggleProperty "newMenu"}}>Add Menu</button>
       <ul class="menu-option__row">
         {{#each model as |menu|}}
-          <li>
-            <div class="menu-option">
-              {{#link-to "admin.menus.menu" menu.id}}
-                <img class="menu-image" src="{{menu.items.content.canonicalState.[0]._data.image}}" alt="">
-                {{menu.name}}
-              {{/link-to}}
-            </div>
+          <li class="menu-option">
+            {{#link-to "admin.menus.menu" menu.id}}
+              <img class="menu-image" src="{{menu.items.content.canonicalState.[0]._data.image}}" alt="">
+              {{menu.name}}
+            {{/link-to}}
           </li>
         {{/each}}
       </ul>
