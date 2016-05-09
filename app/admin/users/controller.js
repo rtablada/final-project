@@ -15,6 +15,8 @@ export default Ember.Controller.extend({
   },
 
   deleteUser(user) {
-    user.destroyRecord();
+    if (confirm(`Delete this menu?\nThis will permanently delete this menu and ALL of it's contents.\nThere's no going back...`)) {
+      user.destroyRecord();
+    }
   },
 });

@@ -1,15 +1,17 @@
 .user-list {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
+  margin-top: 0;
 }
 
 .user {
-  flex-basis: 20rem;
+  flex-basis: 18rem;
   flex-grow: 1;
   flex-shrink: 1;
   margin: $gutter;
   padding: $gutter;
-  border-radius: 6px;
+  border-radius: $brand-border-radius;
   background: $brand-bluegrey;
   color: $brand-green;
 }

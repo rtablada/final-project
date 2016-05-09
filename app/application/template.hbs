@@ -8,13 +8,17 @@
 
         {{#if session.isAuthenticated}}
           <div class="nav-link__container">
-            <span class="nav-link">{{#link-to "logout"}}{{fa-icon "sign-out"}}{{/link-to}}</span>
-            <span class="nav-link__text">Log Out</span>
+            {{#link-to "logout"}}
+              <span class="nav-link__text">Log Out</span>
+              <span class="nav-link">{{fa-icon "sign-out"}}</span>
+            {{/link-to}}
           </div>
         {{else}}
           <div class="nav-link__container">
-            <span class="nav-link">{{#link-to "login"}}{{fa-icon "sign-in"}}{{/link-to}}</span>
-            <span class="nav-link__text">Log In</span>
+            {{#link-to "login"}}
+              <span class="nav-link__text">Log In</span>
+              <span class="nav-link">{{fa-icon "sign-in"}}</span>
+            {{/link-to}}
           </div>
         {{/if}}
       </div>

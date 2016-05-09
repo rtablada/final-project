@@ -5,6 +5,10 @@
 }
 
 .main-row__top {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 
   .add-button {
     padding: $gutter;
@@ -21,21 +25,39 @@
 
 .main-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 
-  .options {
-    display: flex;
+  .list-icon {
+    margin: $gutter;
+    font-size: 10rem;
+  }
+
+  .option {
+    flex-basis: 20rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: $gutter;
+    color: $brand-bluegrey;
+    text-align: center;
+    cursor: pointer;
 
     &-title {
       color: $brand-bluegrey;
       text-align: center;
     }
-  }
 
-  .list-icon {
-    margin: $gutter;
-    color: $brand-white;
-    font-size: 10rem;
+    &:hover {
+      color: $brand-green;
+    }
   }
+}
+
+.delete {
+  display: block;
+  width: calc(100% - 2rem);
+  margin: 0 $gutter;
+  color: $brand-orange;
+  text-align: right;
 }

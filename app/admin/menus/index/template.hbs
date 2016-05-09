@@ -1,26 +1,37 @@
-{{#if newMenu}}
+<div class="main-content">
+  <div class="container">
+    {{#if newMenu}}
 
-  {{#simple-form onsubmit=(action createNewMenu) as |formValues|}}
-    <p>
-      <label>New Menu</label>
-      {{input type="text" name="name" value=formValues.name}}
-    </p>
-    <button>Add Menu</button>
-    <button {{action toggleProperty "newMenu"}}>Cancel</button>
-  {{/simple-form}}
+      <div class="main-row">
+        {{#simple-form class="form-container" onsubmit=(action createNewMenu) as |formValues|}}
+          <p>
+            <label>New Menu</label>
+            {{input class="form-input" type="text" name="name" value=formValues.name}}
+          </p>
+          <div class="form-buttons">
+            <button type="button" {{action toggleProperty "newMenu"}}>{{fa-icon "undo"}}</button>
+            <button>{{fa-icon "plus-square"}}</button>
+          </div>
+        {{/simple-form}}
+      </div>
 
-{{else}}
+    {{else}}
+      <div class="main-row__top">
+        <span class="add-button" {{action toggleProperty "newMenu"}}>{{fa-icon "plus-square"}}</span>
+      </div>
+      <ul class="menu-option__row">
+        {{#each model as |menu|}}
+          <li class="menu-option">
+            {{#link-to "admin.menus.menu" menu.id}}
+              <div class="menu-image__container">
+                <img class="menu-image" src="{{menu.items.content.canonicalState.[0]._data.image}}" alt="">
+              </div>
+              {{menu.name}}
+            {{/link-to}}
+          </li>
+        {{/each}}
+      </ul>
 
-  <ul>
-    <button {{action toggleProperty "newMenu"}}>Add Menu</button>
-    {{#each model as |menu|}}
-      <li>
-        {{#link-to "admin.menus.menu" menu.id}}
-          {{menu.name}}
-        {{/link-to}}
-      </li>
-    {{/each}}
-  </ul>
-
-{{/if}}
-{{outlet}}
+    {{/if}}
+  </div>
+</div>

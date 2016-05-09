@@ -1,0 +1,26 @@
+.menu-option__row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.menu-option {
+  flex-basis: 20rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: $gutter;
+}
+
+.menu-image__container {
+  border-radius: $brand-border-radius;
+  box-shadow: 2px 2px 15px $brand-bluegrey;
+}
+
+.menu-image {
+  width: 100%;
+  height: 16rem;
+  margin-bottom: -4px;
+  border: 6px solid $brand-bluegrey;
+  border-radius: $brand-border-radius;
+  object-fit: cover;
+}
