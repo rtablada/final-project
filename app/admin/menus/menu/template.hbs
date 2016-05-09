@@ -22,7 +22,9 @@
           </p>
           <p>
             <label>Steps</label>
-
+            {{#add-array onadd=(action (mut formValues.steps)) as |step|}}
+              <li>{{input class="form-input" value=step.description}}</li>
+            {{/add-array}}
           </p>
           <p>
             <label>Safe for Allergens:</label>
@@ -48,7 +50,11 @@
                 <img class="menu-image" src="{{item.image}}" alt="">
               </div>
                 <li>{{item.title}}</li>
-                <p>{{item.description}}</p>
+                <li>{{item.description}}</li>
+                {{#each item.steps.content.canonicalState as |step|}}
+                  <li>{{step._data.description}}</li>
+                {{/each}}
+
                 <span class="delete"><a href="#" {{action deleteItem item}}>Remove item</a></span>
             </div>
         {{/each}}

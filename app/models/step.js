@@ -5,5 +5,5 @@ import { belongsTo } from 'ember-data/relationships';
 export default Model.extend({
   description: attr(),
   order: attr('number'),
-  recipe: belongsTo('recipe')
+  item: belongsTo('item'),
 });

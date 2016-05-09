@@ -3,13 +3,20 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   newItem: false,
 
-  createNewItem(attrs) {
-    const item = this.store.createRecord(`item`, attrs);
+  createNewItem({ image, title, description, steps }) {
+    const item = this.store.createRecord(`item`, { image, title, description });
     const menu = this.model;
     item.set(`menu`, menu);
 
     item.save().then(() => {
+      const stepModels = steps.map((step, order) => {
+        const sModel = this.store.createRecord(`step`, { ...step, order, item });
+
+        return sModel.save();
+      });
       this.toggleProperty(`newItem`);
+
+      return Promise.all([...stepModels]);
     }).catch((err) => {
       console.log(err);
     });
