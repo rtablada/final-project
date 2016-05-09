@@ -12,13 +12,16 @@
       {{/simple-form}}
 
     {{else}}
-
-      <button {{action toggleProperty "newMenu"}}>Add Menu</button>
+      <div class="main-row__top">
+        <span class="add-button" {{action toggleProperty "newMenu"}}>{{fa-icon "plus-square"}}</span>
+      </div>
       <ul class="menu-option__row">
         {{#each model as |menu|}}
           <li class="menu-option">
             {{#link-to "admin.menus.menu" menu.id}}
-              <img class="menu-image" src="{{menu.items.content.canonicalState.[0]._data.image}}" alt="">
+              <div class="menu-image__container">
+                <img class="menu-image" src="{{menu.items.content.canonicalState.[0]._data.image}}" alt="">
+              </div>
               {{menu.name}}
             {{/link-to}}
           </li>

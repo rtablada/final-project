@@ -3,6 +3,7 @@ nav {
   width: 100%;
   background: $brand-bluegrey;
   overflow: auto;
+  z-index: 1;
 }
 
 .nav-row {

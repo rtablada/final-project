@@ -11,6 +11,13 @@
   padding: $gutter;
 }
 
+.menu-image__container {
+  width: 20rem;
+  height:20rem;
+  overflow:hidden;
+}
+
 .menu-image {
-  width: 100%;
+  width:auto;
+  height: 20rem;
 }

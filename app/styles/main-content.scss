@@ -10,19 +10,10 @@
   justify-content: flex-start;
 
   .add-button {
-    display: block;
-    position: relative;
     padding: $gutter;
     color: $brand-yellow;
     font-size: $brand-icon-size;
     cursor: pointer;
-  }
-
-  .add-button__text {
-    position: absolute;
-    bottom: 10px;
-    color: $brand-green;
-    font-size: 0.6rem;
   }
 
   .greeting {
