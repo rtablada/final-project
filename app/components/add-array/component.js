@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   items: [],
 
   init() {
-    this._super(..arguments);
+    this._super(...arguments);
 
     this.addItem();
   },
