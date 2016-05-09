@@ -20,5 +20,7 @@
   width: 100%;
   height: 16rem;
   margin-bottom: -4px;
+  border: 6px solid $brand-bluegrey;
+  border-radius: $brand-border-radius;
   object-fit: cover;
 }
