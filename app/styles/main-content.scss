@@ -7,7 +7,8 @@
 .main-row__top {
   display: flex;
   position: relative;
-  justify-content: flex-start;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 
   .add-button {
     padding: $gutter;
@@ -51,4 +52,9 @@
       color: $brand-green;
     }
   }
+}
+
+.delete {
+  margin: 0 $gutter;
+  color: $brand-yellow;
 }

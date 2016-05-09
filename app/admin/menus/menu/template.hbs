@@ -1,40 +1,46 @@
 <div class="main-content">
   <div class="container">
-    <h1>{{model.name}}</h1>
-    <a href="#" {{action deleteMenu model}}>Delete</a>
-    {{#link-to "admin.menus"}}Back{{/link-to}}
+    <div class="main-row__top">
+      <h4 class="greeting">{{model.name}}</h4>
+    </div>
 
     {{#if newItem}}
 
-      {{#simple-form onsubmit=(action createNewItem) as |formValues|}}
-        <p>
-          <label>Image</label>
-          {{input type="text" name="image" value=formValues.image}}
-        </p>
-        <p>
-          <label>Title</label>
-          {{input type="text" name="title" value=formValues.title}}
-        </p>
-        <p>
-          <label>Description</label>
-          {{textarea name="description" value=formValues.description}}
-        </p>
-        <p>
-          <label>Steps</label>
+      <div class="main-row">
+        {{#simple-form class="form-container" onsubmit=(action createNewItem) as |formValues|}}
+          <p>
+            <label>Image</label>
+            {{input class="form-input" type="text" name="image" value=formValues.image}}
+          </p>
+          <p>
+            <label>Title</label>
+            {{input class="form-input" type="text" name="title" value=formValues.title}}
+          </p>
+          <p>
+            <label>Description</label>
+            {{textarea class="form-input" name="description" value=formValues.description}}
+          </p>
+          <p>
+            <label>Steps</label>
 
-        </p>
-        <p>
-          <label>Safe for Allergens:</label>
+          </p>
+          <p>
+            <label>Safe for Allergens:</label>
 
-        </p>
-        <button>Add Item</button>
-        <button {{action toggleProperty "newItem"}}>Cancel</button>
-      {{/simple-form}}
+          </p>
+          <div class="form-buttons">
+            <button {{action toggleProperty "newItem"}}>{{fa-icon "undo"}}</button>
+            <button>{{fa-icon "plus-square"}}</button>
+          </div>
+        {{/simple-form}}
+      </div>
 
     {{else}}
 
-      <button {{action toggleProperty "newItem"}}>New Item</button>
-      <h1>Items:</h1>
+    <div class="main-row__top">
+      <span class="add-button" {{action toggleProperty "newItem"}}>{{fa-icon "plus-square"}}</span>
+      <span class="add-button">{{#link-to "admin.menus"}}{{fa-icon "undo"}}{{/link-to}}</span>
+    </div>
       <ul class="menu-option__row">
         {{#each model.items as |item|}}
             <div class="menu-option">
@@ -47,7 +53,7 @@
             </div>
         {{/each}}
       </ul>
-
+      <span class="delete"><a href="#" {{action deleteMenu model}}>Delete this entire menu!</a></span>
     {{/if}}
   </div>
 </div>

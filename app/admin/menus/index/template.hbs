@@ -2,14 +2,18 @@
   <div class="container">
     {{#if newMenu}}
 
-      {{#simple-form onsubmit=(action createNewMenu) as |formValues|}}
-        <p>
-          <label>New Menu</label>
-          {{input type="text" name="name" value=formValues.name}}
-        </p>
-        <button>Add Menu</button>
-        <button {{action toggleProperty "newMenu"}}>Cancel</button>
-      {{/simple-form}}
+      <div class="main-row">
+        {{#simple-form class="form-container" onsubmit=(action createNewMenu) as |formValues|}}
+          <p>
+            <label>New Menu</label>
+            {{input class="form-input" type="text" name="name" value=formValues.name}}
+          </p>
+          <div class="form-buttons">
+            <button {{action toggleProperty "newMenu"}}>{{fa-icon "undo"}}</button>
+            <button>{{fa-icon "plus-square"}}</button>
+          </div>
+        {{/simple-form}}
+      </div>
 
     {{else}}
       <div class="main-row__top">
