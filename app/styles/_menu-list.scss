@@ -12,12 +12,13 @@
 }
 
 .menu-image__container {
-  width: 20rem;
-  height:20rem;
-  overflow:hidden;
+  border-radius: $brand-border-radius;
+  box-shadow: 2px 2px 15px $brand-bluegrey;
 }
 
 .menu-image {
-  width:auto;
-  height: 20rem;
+  width: 100%;
+  height: 16rem;
+  margin-bottom: -4px;
+  object-fit: cover;
 }

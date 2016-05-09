@@ -9,7 +9,7 @@
   flex-shrink: 1;
   margin: $gutter;
   padding: $gutter;
-  border-radius: 6px;
+  border-radius: $brand-border-radius;
   background: $brand-bluegrey;
   color: $brand-green;
 }
