@@ -55,6 +55,9 @@
 }
 
 .delete {
+  display: block;
+  width: calc(100% - 2rem);
   margin: 0 $gutter;
-  color: $brand-yellow;
+  color: $brand-orange;
+  text-align: right;
 }

@@ -29,7 +29,7 @@
 
           </p>
           <div class="form-buttons">
-            <button {{action toggleProperty "newItem"}}>{{fa-icon "undo"}}</button>
+            <button type="button" {{action toggleProperty "newItem"}}>{{fa-icon "undo"}}</button>
             <button>{{fa-icon "plus-square"}}</button>
           </div>
         {{/simple-form}}
@@ -49,7 +49,7 @@
               </div>
                 <li>{{item.title}}</li>
                 <p>{{item.description}}</p>
-                <a href="#" {{action deleteItem item}}>Remove</a>
+                <span class="delete"><a href="#" {{action deleteItem item}}>Remove item</a></span>
             </div>
         {{/each}}
       </ul>

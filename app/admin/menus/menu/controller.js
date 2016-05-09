@@ -16,13 +16,17 @@ export default Ember.Controller.extend({
   },
 
   deleteItem(item) {
-    item.destroyRecord();
+    if (confirm(`Remove this item?\nThere's no going back...`)) {
+      item.destroyRecord();
+    }
   },
 
   deleteMenu(menu) {
-    menu.destroyRecord()
-    .then(() => {
-      this.transitionToRoute(`admin.menus`);
-    });
+    if (confirm(`Delete this menu?\nThis will permanently delete this menu and ALL of it's contents.\nThere's no going back...`)) {
+      menu.destroyRecord()
+      .then(() => {
+        this.transitionToRoute(`admin.menus`);
+      });
+    }
   },
 });
