@@ -6,7 +6,18 @@ export default Ember.Component.extend({
   init() {
     this._super(...arguments);
 
-    this.addItem();
+    if (!this.get(`values`)) {
+      this.set(`items`, []);
+      this.addItem();
+    }
+  },
+
+  didReceiveAttrs() {
+    if (this.get(`values`)) {
+      this.set(`items`, this.get(`values`).map((x) => {
+        return x.toJSON();
+      }));
+    }
   },
 
   addItem() {
