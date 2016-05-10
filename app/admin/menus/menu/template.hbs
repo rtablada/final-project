@@ -49,11 +49,16 @@
               <div class="menu-image__container">
                 <img class="menu-image" src="{{item.image}}" alt="">
               </div>
-                <li>{{item.title}}</li>
-                <li>{{item.description}}</li>
-                {{#each item.steps.content.canonicalState as |step|}}
-                  <li>{{step._data.description}}</li>
-                {{/each}}
+
+              {{#simple-form startingValues=item onsubmit=(action saveItem item) as |formValues|}}
+                {{input type="text" name="image" value=formValues.image}}
+                {{input type="text" name="title" value=formValues.title}}
+                {{textarea type="text" name="description" value=formValues.description}}
+
+                  {{#add-array values=formValues.steps onadd=(action (mut formValues.steps)) as |step|}}
+                    {{input value=step.description}}
+                  {{/add-array}}
+              {{/simple-form}}
 
                 <span class="delete"><a href="#" {{action deleteItem item}}>Remove item</a></span>
             </div>

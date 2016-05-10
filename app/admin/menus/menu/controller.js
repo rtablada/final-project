@@ -22,6 +22,12 @@ export default Ember.Controller.extend({
     });
   },
 
+  saveItem(item, values) {
+    item.setProperties(values);
+
+    item.save();
+  },
+
   deleteItem(item) {
     if (confirm(`Remove this item?\nThere's no going back...`)) {
       item.destroyRecord();
