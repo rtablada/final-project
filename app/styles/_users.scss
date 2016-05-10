@@ -13,7 +13,10 @@
   padding: $gutter;
   border-radius: $brand-border-radius;
   background: $brand-bluegrey;
-  color: $brand-green;
+
+  &-text {
+    color: $brand-green;
+  }
 }
 
 .user-remove {

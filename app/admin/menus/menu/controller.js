@@ -28,9 +28,19 @@ export default Ember.Controller.extend({
     item.save();
   },
 
+  deleteStep(step) {
+    if (confirm(`Remove this item?\nThere's no going back...`)) {
+      step.destroyRecord();
+    }
+  },
+
   deleteItem(item) {
     if (confirm(`Remove this item?\nThere's no going back...`)) {
-      item.destroyRecord();
+      Promise.all(item.get(`steps`).map((step) => {
+        return step.destroyRecord();
+      })).then(() => {
+        item.destroyRecord();
+      });
     }
   },
 

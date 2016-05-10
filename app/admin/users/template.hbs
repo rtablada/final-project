@@ -33,8 +33,8 @@
           {{#each model as |user|}}
             <p class="user">
               {{#simple-form class="editable-form" startingValues=user onsubmit=(action saveUser user) as |formValues|}}
-                {{input class="form-hidden" type="text" name="username" value=formValues.username}}
-                {{input class="form-hidden" type="text" name="email" value=formValues.email}}
+                {{input class="form-hidden user-text" type="text" name="username" value=formValues.username}}
+                {{input class="form-hidden user-text" type="text" name="email" value=formValues.email}}
                 <button></button>
               {{/simple-form}}
               <div class="user-remove">
