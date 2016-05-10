@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
 
   saveItem(item, values) {
     item.setProperties(values);
-
+    $(`.form-hidden`).blur();
     item.save();
   },
 

@@ -46,18 +46,16 @@
       <ul class="menu-option__row">
         {{#each model.items as |item|}}
             <div class="menu-option">
-              <div class="menu-image__container">
-                <img class="menu-image" src="{{item.image}}" alt="">
-              </div>
 
-              {{#simple-form startingValues=item onsubmit=(action saveItem item) as |formValues|}}
-                {{input type="text" name="image" value=formValues.image}}
-                {{input type="text" name="title" value=formValues.title}}
-                {{textarea type="text" name="description" value=formValues.description}}
-
-                  {{#add-array values=formValues.steps onadd=(action (mut formValues.steps)) as |step|}}
-                    {{input value=step.description}}
-                  {{/add-array}}
+              {{#simple-form class="editable-form" startingValues=item onsubmit=(action saveItem item) as |formValues|}}
+                <div class="image-title__container">
+                  <div class="menu-image__container">
+                    <img class="menu-image" src="{{item.image}}" alt="">
+                  </div>
+                  {{input class="form-hidden image-title__container--title" type="text" name="title" value=formValues.title}}
+                </div>
+                {{textarea autoresize=true class="form-hidden" type="text" name="description" value=formValues.description}}
+                <button></button>
               {{/simple-form}}
 
                 <span class="delete"><a href="#" {{action deleteItem item}}>Remove item</a></span>

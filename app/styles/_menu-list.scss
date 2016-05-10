@@ -11,6 +11,21 @@
   padding: $gutter;
 }
 
+.image-title__container {
+  position: relative;
+
+  &--title {
+    position: absolute;
+    bottom: $gutter;
+    width: 100%;
+    color: $brand-white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 2px $brand-lighgrey;
+  }
+}
+
 .menu-image__container {
   border-radius: $brand-border-radius;
   box-shadow: 2px 2px 15px $brand-bluegrey;
