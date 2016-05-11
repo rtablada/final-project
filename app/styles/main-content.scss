@@ -13,14 +13,18 @@
 
   .add-button {
     padding: $gutter;
-    color: $brand-yellow;
+    color: $main-btn;
     font-size: $brand-icon-size;
     cursor: pointer;
+
+    &:hover {
+      color: $main-btn-hover;
+    }
   }
 
   .greeting {
     margin: 0 $gutter;
-    color: $brand-yellow;
+    color: $greeting;
   }
 }
 
@@ -40,17 +44,17 @@
     flex-grow: 1;
     flex-shrink: 1;
     padding: $gutter;
-    color: $brand-bluegrey;
+    color: $main-option;
     text-align: center;
     cursor: pointer;
 
     &-title {
-      color: $brand-bluegrey;
+      color: $main-option-txt;
       text-align: center;
     }
 
     &:hover {
-      color: $brand-green;
+      color: $main-option-hover;
     }
   }
 }
@@ -59,6 +63,6 @@
   display: block;
   width: calc(100% - 2rem);
   margin: 0 $gutter;
-  color: $brand-orange;
+  color: $brand-important;
   text-align: right;
 }
