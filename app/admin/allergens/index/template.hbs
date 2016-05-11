@@ -1,0 +1,37 @@
+<div class="main-content">
+  <div class="container">
+    <h1>All Allergens</h1>
+
+    {{#link-to "admin.allergens.new"}}New Allergen{{/link-to}}
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {{#each model as |allergen|}}
+          <tr>
+            <td>{{allergen.id}}</td>
+            <td>{{allergen.name}}</td>
+            <td>
+              {{#link-to "admin.allergens.edit" allergen.id}}
+                <span>{{fa-icon "fa-pencil"}}</span>
+              {{/link-to}}
+            </td>
+            <td>
+              <button {{action delete allergen}}>
+                <span>{{fa-icon "fa-trash"}}</span>
+              </button>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

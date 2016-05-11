@@ -18,6 +18,12 @@ Router.map(function() {
         path: '/:menu_id'
       });
     });
+    this.route('allergens', function() {
+      this.route('new');
+      this.route('edit', {
+        path: '/:id'
+      });
+    });
   });
 });
 

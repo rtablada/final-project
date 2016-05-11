@@ -1,0 +1,11 @@
+<div class="main-content">
+  <div class="container">
+    {{#simple-form startingValues=model onsubmit=(action saveAllergen model) as |formValues|}}
+      {{input placeholder="URL" value=formValues.name}}
+
+      {{#link-to "admin.allergens.index"}}Cancel{{/link-to}}
+
+      <button>Save</button>
+    {{/simple-form}}
+  </div>
+</div>
