@@ -4,14 +4,18 @@
   }
 
   textarea {
+    width: 100%;
     resize: none;
+  }
+
+  input {
+    width: 100%;
   }
 }
 
 .form-hidden {
   border: 0;
   background: none;
-  color: $brand-bluegrey;
   font-size: 1rem;
 
   &:focus {
