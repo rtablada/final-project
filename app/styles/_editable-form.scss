@@ -1,0 +1,21 @@
+.editable-form {
+  button {
+    display: none;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+.form-hidden {
+  border: 0;
+  background: none;
+  color: $brand-bluegrey;
+  font-size: 1rem;
+
+  &:focus {
+    outline: none;
+    background: $brand-white;
+  }
+}

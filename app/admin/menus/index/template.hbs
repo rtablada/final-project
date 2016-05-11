@@ -24,7 +24,8 @@
           <li class="menu-option">
             {{#link-to "admin.menus.menu" menu.id}}
               <div class="menu-image__container">
-                <img class="menu-image" src="{{menu.items.content.canonicalState.[0]._data.image}}" alt="">
+                {{log menu.items.firstObject.image}}
+                <img class="menu-image" src="{{menu.items.firstObject.image}}" alt="">
               </div>
               {{menu.name}}
             {{/link-to}}

@@ -14,6 +14,12 @@ export default Ember.Controller.extend({
     });
   },
 
+  saveUser(user, values) {
+    user.setProperties(values);
+    $(`.form-hidden`).blur();
+    user.save();
+  },
+
   deleteUser(user) {
     if (confirm(`Delete this menu?\nThis will permanently delete this menu and ALL of it's contents.\nThere's no going back...`)) {
       user.destroyRecord();

@@ -17,7 +17,7 @@
             {{input class="form-input" type="password" placeholder="john123 (max length 25)" maxlength="25" value=formValues.password}}
           </p>
           <div class="form-buttons">
-            <button {{action toggleProperty "newUser"}}>{{fa-icon "undo"}}</button>
+            <button type="button" {{action toggleProperty "newUser"}}>{{fa-icon "undo"}}</button>
             <button>{{fa-icon "plus-square"}}</button>
           </div>
         {{/simple-form}}
@@ -32,16 +32,15 @@
         <ul class="user-list">
           {{#each model as |user|}}
             <p class="user">
-              <li>{{user.username}}</li>
-              <li>
-                {{user.email}}
-              </li>
-              <li>
-                <div class="user-remove">
-                  <span class="user-remove__text"><a href="#" {{action deleteUser user}}>Remove</a></span>
-                  {{fa-icon "user-times"}}
-                </div>
-              </li>
+              {{#simple-form class="editable-form" startingValues=user onsubmit=(action saveUser user) as |formValues|}}
+                {{input class="form-hidden user-text" type="text" name="username" value=formValues.username}}
+                {{input class="form-hidden user-text" type="text" name="email" value=formValues.email}}
+                <button></button>
+              {{/simple-form}}
+              <div class="user-remove">
+                <span class="user-remove__text"><a href="#" {{action deleteUser user}}>Remove</a></span>
+                {{fa-icon "user-times"}}
+              </div>
             </p>
           {{/each}}
         </ul>
