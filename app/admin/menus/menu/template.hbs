@@ -27,7 +27,7 @@
             {{/add-array}}
           </p>
           <p>
-            <label>Safe for Allergens:</label>
+            {{!-- <label>Safe for Allergens:</label> --}}
 
           </p>
           <div class="form-buttons">
@@ -60,7 +60,7 @@
 
               {{#each item.steps as |step|}}
                 <li>{{step.description}}</li>
-                <span class="delete"><a href="#" {{action deleteStep step}}>Delete step</a></span>
+                {{!-- <span class="delete"><a href="#" {{action deleteStep step}}>Delete step</a></span> --}}
               {{/each}}
               <span class="delete"><a href="#" {{action deleteItem item items.steps}}>Delete this item</a></span>
             </div>
