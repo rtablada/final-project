@@ -1,7 +1,7 @@
 nav {
   position: fixed;
   width: 100%;
-  background: $brand-bluegrey;
+  background: $nav-bar-bg;
   overflow: auto;
   z-index: 1;
 }
@@ -20,11 +20,11 @@ nav {
   display: block;
   position: relative;
   padding: $gutter;
-  color: $brand-lighgrey;
+  color: $nav-btn;
   font-size: $brand-icon-size;
 
   &:hover {
-    color: $brand-yellow;
+    color: $nav-btn-hover;
   }
 }
 
@@ -32,7 +32,7 @@ nav {
   position: absolute;
   bottom: 10px;
   width: 100%;
-  color: $brand-green;
+  color: $nav-btn-txt;
   font-size: 0.6rem;
   text-align: center;
 }
@@ -40,12 +40,12 @@ nav {
 .fobie {
   display: block;
   padding: $gutter;
-  color: $brand-green;
+  color: $logo;
   font-family: $brand-font;
   font-size: 2rem;
   font-weight: 900;
 
   &:hover {
-    color: darken($brand-green, 10%);
+    color: $logo-hover;
   }
 }
