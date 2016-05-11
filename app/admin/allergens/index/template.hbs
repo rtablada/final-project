@@ -19,9 +19,13 @@
           <tr>
             <td>{{allergen.id}}</td>
             <td>{{allergen.name}}</td>
-            <td></td>
             <td>
-              <button>
+              {{#link-to "admin.allergens.edit" allergen.id}}
+                <span>{{fa-icon "fa-pencil"}}</span>
+              {{/link-to}}
+            </td>
+            <td>
+              <button {{action delete allergen}}>
                 <span>{{fa-icon "fa-trash"}}</span>
               </button>
             </td>

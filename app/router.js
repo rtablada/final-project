@@ -20,6 +20,9 @@ Router.map(function() {
     });
     this.route('allergens', function() {
       this.route('new');
+      this.route('edit', {
+        path: '/:id'
+      });
     });
   });
 });
