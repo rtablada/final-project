@@ -5,16 +5,20 @@
     margin: $gutter;
 
     label {
-      color: $brand-bluegrey;
+      color: $form-label;
     }
 
     button {
       border: 0;
       outline: none;
       background: none;
-      color: $brand-yellow;
+      color: $form-btn;
       font-size: $brand-icon-size;
       cursor: pointer;
+
+      &:hover {
+        color: $form-btn-hover;
+      }
     }
   }
 
@@ -22,10 +26,10 @@
     width: 100%;
     margin: 0;
     padding: $gutter / 2;
-    border: 1px solid $brand-lighgrey;
+    border: 1px solid $form-border;
 
     &:focus {
-      outline: $brand-green auto 5px;
+      outline: $form-glow auto 5px;
     }
   }
 
