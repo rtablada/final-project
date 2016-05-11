@@ -1,0 +1,29 @@
+<div class="main-content">
+  <div class="container">
+    <h1>All Allergens</h1>
+
+    {{#link-to "admin.allergens.new"}}New Allergen{{/link-to}}
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {{#each model as |allergen|}}
+          <tr>
+            <td>{{allergen.id}}</td>
+            <td>{{allergen.name}}</td>
+            <td></td>
+            <td></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
