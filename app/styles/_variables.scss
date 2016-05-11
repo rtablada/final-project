@@ -8,7 +8,7 @@ $brand-white: #fffffa;
 $brand-yellow: #d6da47;
 $brand-orange: #b55b43;
 
-$brand-trans-overlay: rgba(#b6b6b6, 0.5);
+$brand-trans-overlay: rgba(#ffffff, 0.85);
 $body-txt: #333138;
 $brand-font: 'Exo 2', sans-serif;
 $brand-icon-size: 1.4rem;
@@ -16,12 +16,18 @@ $brand-border-radius: 6px;
 $brand-box-shadow: #333138;
 $brand-important: #b55b43;
 ////////////////////////////
-$nav-bar-bg: #333138;
-$nav-btn: #3b795f;
-$nav-btn-hover: #d6da47;
-$nav-btn-txt: #3b795f;
-$logo: #3b795f;
-$logo-hover: #72a790;
+$nav-bar-bg: #35404F;
+$nav-btn: #4AAAA5;
+$nav-btn-hover: #7ACCC8;
+$nav-btn-txt: #A3D39C;
+$logo: #E45F56;
+$logo-hover: #E45F56;
+
+// #35404F
+// #4AAAA5
+// #7ACCC8
+// #A3D39C
+// #E45F56
 
 $form-label: #333138;
 $form-btn: #d6da47;
@@ -29,10 +35,10 @@ $form-btn-hover: #333138;
 $form-border: #515052;
 $form-glow: #3b795f;
 
-$main-option: #333138;
-$main-option-hover: #3b795f;
-$main-option-txt: #333138;
-$greeting: #d6da47;
+$main-option: #35404F;
+$main-option-hover: #E45F56;
+$main-option-txt: #E45F56;
+$greeting: #4AAAA5;
 $main-btn: #d6da47;
 $main-btn-hover: #333138;
 

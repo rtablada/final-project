@@ -38,7 +38,9 @@
 
     <div class="main-row__top">
       <span class="add-button" {{action toggleProperty "newItem"}}>{{fa-icon "plus-square"}}</span>
-      <h4 class="menu-title">{{model.name}}</h4>
+      {{#simple-form class="editable-form" startingValues=model onsubmit=(action saveItem model) as |formValues|}}
+        {{input autoresize=true class="form-hidden menu-title" type="text" name="menu" value=formValues.name}}
+      {{/simple-form}}
       <span class="add-button">{{#link-to "admin.menus"}}{{fa-icon "undo"}}{{/link-to}}</span>
     </div>
       <ul class="menu-option__row">
