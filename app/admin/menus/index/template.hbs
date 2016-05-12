@@ -5,20 +5,35 @@
       <div class="main-row">
         {{#simple-form class="form-container" onsubmit=(action createNewMenu) as |formValues|}}
           <p>
-            <label>New Menu</label>
+            <label>Menu Title</label>
             {{input class="form-input" type="text" name="name" value=formValues.name}}
           </p>
           <div class="form-buttons">
-            <button type="button" {{action toggleProperty "newMenu"}}>{{fa-icon "undo"}}</button>
-            <button>{{fa-icon "plus-square"}}</button>
+            <div class="nav-link__container">
+              <span class="nav-link__text">Cancel</span>
+              <span class="nav-link" {{action toggleProperty "newMenu"}}>{{fa-icon "backward"}}</span>
+            </div>
+            <div class="nav-link__container">
+              <span class="nav-link__text">Add Menu</span>
+              <button class="nav-link">{{fa-icon "plus"}}</button>
+            </div>
           </div>
         {{/simple-form}}
       </div>
 
     {{else}}
+
       <div class="main-row__top">
-        <span class="add-button" {{action toggleProperty "newMenu"}}>{{fa-icon "plus-square"}}</span>
+        <div class="nav-link__container">
+          <span class="nav-link__text">New Menu</span>
+          <span class="nav-link" {{action toggleProperty "newMenu"}}>{{fa-icon "plus"}}</span>
+        </div>
+        <div class="nav-link__container">
+          <span class="nav-link__text">Back</span>
+          {{#link-to "admin"}}<span class="nav-link">{{fa-icon "backward"}}</span>{{/link-to}}
+        </div>
       </div>
+
       <ul class="menu-option__row">
         {{#each model as |menu|}}
           <li class="menu-option">

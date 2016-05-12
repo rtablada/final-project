@@ -17,8 +17,14 @@
             {{input class="form-input" type="password" placeholder="john123 (max length 25)" maxlength="25" value=formValues.password}}
           </p>
           <div class="form-buttons">
-            <button type="button" {{action toggleProperty "newUser"}}>{{fa-icon "undo"}}</button>
-            <button>{{fa-icon "plus-square"}}</button>
+            <div class="nav-link__container">
+              <span class="nav-link__text">Cancel</span>
+              <span class="nav-link" {{action toggleProperty "newUser"}}>{{fa-icon "backward"}}</span>
+            </div>
+            <div class="nav-link__container">
+              <span class="nav-link__text">Add User</span>
+              <span class="nav-link">{{fa-icon "user-plus"}}</span>
+            </div>
           </div>
         {{/simple-form}}
       </div>
@@ -29,6 +35,10 @@
         <div class="nav-link__container">
           <span class="nav-link__text">New User</span>
           <span class="nav-link" {{action toggleProperty "newUser"}}>{{fa-icon "user-plus"}}</span>
+        </div>
+        <div class="nav-link__container">
+          <span class="nav-link__text">Back</span>
+          {{#link-to "admin"}}<span class="nav-link">{{fa-icon "backward"}}</span>{{/link-to}}
         </div>
       </div>
 

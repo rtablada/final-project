@@ -12,13 +12,8 @@
       border: 0;
       outline: none;
       background: none;
-      color: $form-btn;
       font-size: $brand-icon-size;
       cursor: pointer;
-
-      &:hover {
-        color: $form-btn-hover;
-      }
     }
   }
 
