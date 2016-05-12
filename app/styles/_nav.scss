@@ -6,6 +6,15 @@ nav {
   z-index: 1;
 }
 
+.nav-link__group {
+  display: flex;
+}
+
+.nav-container {
+  max-width: 85rem;
+  margin: auto;
+}
+
 .nav-row {
   display: flex;
   align-items: center;
@@ -51,5 +60,7 @@ nav {
 
   &:hover {
     border-bottom: $logo 6px solid;
+    background: $logo;
+    color: $nav-bar-bg;
   }
 }
