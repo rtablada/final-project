@@ -6,19 +6,39 @@ nav {
   z-index: 1;
 }
 
-.nav-link__group {
-  display: flex;
-}
-
 .nav-container {
-  max-width: 85rem;
-  margin: auto;
+  margin: 0 $gutter;
 }
 
 .nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.fobie {
+  display: block;
+  padding: $gutter;
+  border-bottom: transparent 6px solid;
+  color: $logo;
+  font-family: $brand-font;
+  font-size: 2rem;
+  font-weight: 900;
+
+  &:hover {
+    border-bottom: $logo 6px solid;
+    background: $logo;
+    color: $nav-bar-bg;
+  }
+}
+
+.nav-link__group {
+  display: flex;
+}
+
+.greeting {
+  margin: 0 $gutter;
+  color: $greeting;
 }
 
 .nav-link__container {
@@ -47,20 +67,4 @@ nav {
   color: $nav-btn-txt;
   font-size: 0.6rem;
   text-align: center;
-}
-
-.fobie {
-  display: block;
-  padding: $gutter;
-  border-bottom: transparent 6px solid;
-  color: $logo;
-  font-family: $brand-font;
-  font-size: 2rem;
-  font-weight: 900;
-
-  &:hover {
-    border-bottom: $logo 6px solid;
-    background: $logo;
-    color: $nav-bar-bg;
-  }
 }

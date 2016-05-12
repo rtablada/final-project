@@ -4,7 +4,13 @@
       <div class="nav-row">
         <span>{{#link-to "admin" class="fobie"}}FOHBI{{/link-to}}</span>
 
-        <div class="nav-link__group"><div class="nav-link__container">
+        <div class="nav-link__group">
+
+          <h4 class="greeting">
+            Hello, {{session.session.content.authenticated.user.username}}
+          </h4>
+
+          <div class="nav-link__container">
             {{#link-to "admin"}}
               <span class="nav-link__text">Home</span>
               <span class="nav-link">{{fa-icon "home"}}</span>
@@ -18,14 +24,9 @@
                 <span class="nav-link">{{fa-icon "sign-out"}}</span>
               {{/link-to}}
             </div>
-          {{else}}
-            {{!-- <div class="nav-link__container">
-              {{#link-to "login"}}
-                <span class="nav-link__text">Log In</span>
-                <span class="nav-link">{{fa-icon "sign-in"}}</span>
-              {{/link-to}}
-            </div> --}}
-          {{/if}}</div>
+          {{/if}}
+        </div>
+
       </div>
     </div>
   </nav>
