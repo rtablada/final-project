@@ -59,10 +59,18 @@
   }
 }
 
-.delete {
+.delete-item {
   display: block;
   width: calc(100% - 2rem);
   margin: 0 $gutter;
   color: $brand-important;
   text-align: right;
+}
+
+.delete-menu {
+  display: block;
+  width: 100%;
+  margin-top: 10rem;
+  color: $brand-important;
+  text-align: center;
 }

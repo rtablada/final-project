@@ -1,4 +1,3 @@
-$gutter: 1rem;
 
 $brand-green: #3b795f;
 $brand-bluegrey: #333138;
@@ -8,8 +7,11 @@ $brand-white: #fffffa;
 $brand-yellow: #d6da47;
 $brand-orange: #b55b43;
 
+
+
+$gutter: 1rem;
 $brand-trans-overlay: rgba(#000000, 0.85);
-$body-txt: #333138;
+$body-txt: #35404F;
 $brand-font: 'Exo 2', sans-serif;
 $brand-icon-size: 2rem;
 $brand-border-radius: 6px;
@@ -40,10 +42,13 @@ $greeting: #4AAAA5;
 $main-btn: #4AAAA5;
 $main-btn-hover: #7ACCC8;
 
-$user-card-bg: #35404F;
+$user-card-bg: rgba(#35404f, 0.85);
 $user-card-txt: #4AAAA5;
 
-$menu-title: #333138;
-$menu-title-shadow: #333138;
-$menu-title-edit: #333138;
-$menu-image-border: #333138;
+$menu-title: #A3D39C;
+
+$image-border: rgba(#35404F, 0.85);
+$image-title: #A3D39C;
+$image-title-shadow: #35404F;
+$image-title-edit: #35404F;
+$item-description: #A3D39C;
