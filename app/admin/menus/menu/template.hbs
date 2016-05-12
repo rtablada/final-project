@@ -69,11 +69,11 @@
                 <button></button>
               {{/simple-form}}
 
-              <span class="delete-item"><a href="#" {{action deleteItem item items.steps}}>Delete this item</a></span>
+              <span class="delete-item" {{action deleteItem item items.steps}}>Delete Item</span>
             </div>
         {{/each}}
       </ul>
-      <span class="delete-menu"><a href="#" {{action deleteMenu model}}>Delete this entire menu!</a></span>
+      <span class="delete-menu"><a href="#" {{action deleteMenu model}}>Delete Menu</a></span>
     {{/if}}
   </div>
 </div>

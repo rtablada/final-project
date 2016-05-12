@@ -38,9 +38,9 @@
         {{#each model as |menu|}}
           <li class="menu-option">
               <div class="image-title__container">
-                <div class="menu-image__container">
+                <div class="item-image__container">
                   {{#link-to "admin.menus.menu" menu.id}}
-                  <img class="menu-image" src="{{menu.items.firstObject.image}}" alt="">
+                  <img class="item-image" src="{{menu.items.firstObject.image}}" alt="">
                   <h4 class="image-title__container--title">{{menu.name}}</h4>
                   {{/link-to}}
                 </div>
