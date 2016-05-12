@@ -2,7 +2,12 @@
   <nav>
     <div class="container">
       <div class="nav-row">
-        <span>{{#link-to "admin" class="nav-link"}}{{fa-icon "home"}}{{/link-to}}</span>
+        <div class="nav-link__container">
+          {{#link-to "admin"}}
+            <span class="nav-link__text">Home</span>
+            <span class="nav-link">{{fa-icon "home"}}</span>
+          {{/link-to}}
+        </div>
 
         <span>{{#link-to "admin" class="fobie"}}FOHBI{{/link-to}}</span>
 

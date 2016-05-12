@@ -20,10 +20,13 @@ nav {
   display: block;
   position: relative;
   padding: $gutter;
+  border-bottom: transparent 6px solid;
   color: $nav-btn;
   font-size: $brand-icon-size;
+  cursor: pointer;
 
   &:hover {
+    border-bottom: $logo 6px solid;
     color: $nav-btn-hover;
   }
 }
@@ -40,12 +43,13 @@ nav {
 .fobie {
   display: block;
   padding: $gutter;
+  border-bottom: transparent 6px solid;
   color: $logo;
   font-family: $brand-font;
   font-size: 2rem;
   font-weight: 900;
 
   &:hover {
-    color: $logo-hover;
+    border-bottom: $logo 6px solid;
   }
 }

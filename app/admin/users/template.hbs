@@ -26,8 +26,12 @@
     {{else}}
 
       <div class="main-row__top">
-        <span class="add-button" {{action toggleProperty "newUser"}}>{{fa-icon "user-plus"}}</span>
+        <div class="nav-link__container">
+          <span class="nav-link__text">New User</span>
+          <span class="nav-link" {{action toggleProperty "newUser"}}>{{fa-icon "user-plus"}}</span>
+        </div>
       </div>
+
       <div class="main-row">
         <ul class="user-list">
           {{#each model as |user|}}
