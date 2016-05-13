@@ -5,25 +5,26 @@
         <span>{{#link-to "admin" class="fobie"}}FOHBI{{/link-to}}</span>
 
         <div class="nav-link__group">
-
-          <h4 class="greeting">
-            Hello, {{session.session.content.authenticated.user.username}}
-          </h4>
-
-          <div class="nav-link__container">
-            {{#link-to "admin"}}
-              <span class="nav-link__text">Home</span>
-              <span class="nav-link">{{fa-icon "home"}}</span>
-            {{/link-to}}
-          </div>
-
           {{#if session.isAuthenticated}}
+
+            <h4 class="greeting">
+              Hello, {{session.session.content.authenticated.user.username}}
+            </h4>
+
+            <div class="nav-link__container">
+              {{#link-to "admin"}}
+                <span class="nav-link__text">Home</span>
+                <span class="nav-link">{{fa-icon "home"}}</span>
+              {{/link-to}}
+            </div>
+
             <div class="nav-link__container">
               {{#link-to "logout"}}
                 <span class="nav-link__text">Log Out</span>
                 <span class="nav-link">{{fa-icon "sign-out"}}</span>
               {{/link-to}}
             </div>
+
           {{/if}}
         </div>
 
