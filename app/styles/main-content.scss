@@ -55,11 +55,8 @@
 }
 
 .delete-item {
-  display: block;
-  width: calc(100% - 2rem);
-  margin: 0 $gutter;
   color: $brand-important;
-  text-align: right;
+  cursor: pointer;
 }
 
 .delete-menu {
@@ -68,4 +65,5 @@
   margin-top: 10rem;
   color: $brand-important;
   text-align: center;
+  cursor: pointer;
 }

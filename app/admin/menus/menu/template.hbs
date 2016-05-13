@@ -73,11 +73,13 @@
                 {{/simple-form}}
               {{/each}}
 
-              <span class="delete-item" {{action deleteItem item items.steps}}>Delete Item</span>
+              <div class="menu-option__row">
+                <span class="delete-item" {{action deleteItem item items.steps}}>Delete this menu item</span>
+              </div>
             </div>
         {{/each}}
       </ul>
-      <span class="delete-menu"><a href="#" {{action deleteMenu model}}>Delete Menu</a></span>
+      <span class="delete-menu" {{action deleteMenu model}}>Delete this menu</span>
     {{/if}}
   </div>
 </div>
