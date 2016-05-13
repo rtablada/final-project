@@ -4,11 +4,11 @@
       {{#simple-form class="form-container" onsubmit=(action loginUser) as |formValues|}}
         <p>
           <label>Email</label>
-          {{input class="form-input" type="text" name="email" value=formValues.email}}
+          {{input class="form-input" type="text" name="email" placeholder="Email" maxlength="25" value=formValues.email}}
         </p>
         <p>
           <label>Password</label>
-          {{input class="form-input" type="password" name="password" value=formValues.password}}
+          {{input class="form-input" type="password" name="password" placeholder="Password" maxlength="25" value=formValues.password}}
         </p>
         <div class="form-buttons">
           <div class="nav-link__container">

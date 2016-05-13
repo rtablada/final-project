@@ -35,7 +35,7 @@ export default Ember.Controller.extend({
   },
 
   deleteStep(step) {
-    if (confirm(`Remove this item?\nThere's no going back...`)) {
+    if (confirm(`Remove this step?\nThere's no going back...`)) {
       step.destroyRecord();
     }
   },

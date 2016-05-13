@@ -52,9 +52,24 @@
 }
 
 .item-description {
+  width: 100%;
   color: $item-description;
+
+  &__title {
+    color: $item-description-title;
+    border-bottom: 1px solid $item-description-title;
+  }
 }
 
 .item-step {
-  color: $item-description;
+  color: $item-step;
+
+  &__description {
+    width: 100%;
+    color: $item-step-description;
+  }
+}
+
+.delete {
+  color: $brand-important;
 }

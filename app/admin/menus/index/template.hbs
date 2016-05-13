@@ -6,7 +6,7 @@
         {{#simple-form class="form-container" onsubmit=(action createNewMenu) as |formValues|}}
           <p>
             <label>Menu Title</label>
-            {{input class="form-input" type="text" name="name" value=formValues.name}}
+            {{input class="form-input" type="text" name="name" placeholder="New Menu Title (max length 25)" maxlength="25" value=formValues.name}}
           </p>
           <div class="form-buttons">
             <div class="nav-link__container">
