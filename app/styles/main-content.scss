@@ -10,17 +10,6 @@
   position: relative;
   flex-direction: row-reverse;
   justify-content: space-between;
-
-  .add-button {
-    padding: $gutter;
-    color: $main-btn;
-    font-size: $brand-icon-size;
-    cursor: pointer;
-
-    &:hover {
-      color: $main-btn-hover;
-    }
-  }
 }
 
 .main-row {
@@ -33,23 +22,27 @@
     margin: $gutter;
     font-size: 16rem;
   }
+}
 
-  .option {
-    flex-basis: 20rem;
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding: $gutter;
-    color: $main-option;
+.option {
+  flex-basis: 20rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: $gutter;
+  color: $brand-6;
+  text-align: center;
+  cursor: pointer;
+
+  &-title {
+    color: $brand-1;
     text-align: center;
-    cursor: pointer;
+  }
 
-    &-title {
-      color: $main-option-txt;
-      text-align: center;
-    }
+  &:hover {
+    color: $brand-3;
 
-    &:hover {
-      color: $main-option-hover;
+    .option-title {
+      color: $brand-6;
     }
   }
 }
