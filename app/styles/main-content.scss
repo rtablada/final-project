@@ -49,15 +49,33 @@
 }
 
 .delete-item {
-  color: $brand-important;
+  border-bottom: 3px solid transparent;
+  color: $brand-1;
   cursor: pointer;
+
+  &:hover {
+    border-bottom: 3px solid $brand-4;
+  }
+}
+
+.main-row__bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .delete-menu {
-  display: block;
-  width: 100%;
-  margin-top: 10rem;
-  color: $brand-important;
-  text-align: center;
+  width: 10.4rem;
+  margin: 6rem 0;
+  padding-top: $gutter;
+  transition: 0.5s ease;
+  border-bottom: 3px solid transparent;
+  color: $brand-1;
+  text-align: right;
   cursor: pointer;
+
+  &:hover {
+    width: 100%;
+    border-bottom: 3px solid $brand-4;
+  }
 }

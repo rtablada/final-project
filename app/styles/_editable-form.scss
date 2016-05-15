@@ -1,4 +1,8 @@
 .editable-form {
+  input, textarea {
+    cursor: zoom-in;
+  }
+
   button {
     display: none;
   }
@@ -6,10 +10,6 @@
   textarea {
     width: 100%;
     resize: none;
-  }
-
-  input {
-    width: 100%;
   }
 }
 
@@ -22,5 +22,6 @@
     outline: none;
     background: $form-edit-bg;
     color: $body-txt;
+    cursor: auto;
   }
 }

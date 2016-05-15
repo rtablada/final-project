@@ -49,9 +49,11 @@
           <span class="nav-link" {{action toggleProperty "newItem"}}>{{fa-icon "plus"}}</span>
         </div>
 
-        {{#simple-form class="editable-form" startingValues=model onsubmit=(action saveItem model) as |formValues|}}
-          {{input autoresize=true class="form-hidden menu-title" type="text" name="menu" value=formValues.name}}
-        {{/simple-form}}
+        <div class="nav-link_container">
+          {{#simple-form class="editable-form" startingValues=model onsubmit=(action saveItem model) as |formValues|}}
+            {{input autoresize=true class="form-hidden menu-title" type="text" name="menu" value=formValues.name}}
+          {{/simple-form}}
+        </div>
 
         <div class="nav-link__container">
           <span class="nav-link__text">Back</span>
@@ -78,21 +80,25 @@
               {{/simple-form}}
 
               <h3 class="item-description__title">Preparation Steps:</h3>
-              {{#each item.steps as |step|}}
-                {{#simple-form class="editable-form" startingValues=step onsubmit=(action saveStep step) as |formValues|}}
-                  <li>
-                    {{textarea autoresize=true class="form-hidden item-step__description" type="text" name="step" value=step.description}}
-                  </li>
-                {{/simple-form}}
-              {{/each}}
+              <ol>
+                {{#each item.steps as |step|}}
+                  {{#simple-form class="editable-form" startingValues=step onsubmit=(action saveStep step) as |formValues|}}
+                    <li class="item-step">
+                      {{textarea autoresize=true class="form-hidden item-step__description" type="text" name="step" value=step.description}}
+                    </li>
+                  {{/simple-form}}
+                {{/each}}
+              </ol>
 
-              <div class="menu-option__row">
-                <span class="delete-item" {{action deleteItem item items.steps}}>{{fa-icon "trash"}} Delete menu item</span>
+              <div class="main-row__bottom">
+                <span class="delete-item" {{action deleteItem item items.steps}}>{{fa-icon "trash"}} Delete single item</span>
               </div>
             </div>
         {{/each}}
       </ul>
-      <span class="delete-menu" {{action deleteMenu model}}>Delete this menu</span>
+      <div class="main-row__bottom">
+        <span class="delete-menu" {{action deleteMenu model}}>Delete this whole menu</span>
+      </div>
     {{/if}}
   </div>
 </div>

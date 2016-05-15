@@ -31,6 +31,10 @@
 
   &__text {
     margin-right: $gutter / 2;
-    color: $brand-1;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+      border-bottom: 3px solid $brand-4;
+    }
   }
 }
