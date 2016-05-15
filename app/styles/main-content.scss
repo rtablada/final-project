@@ -29,7 +29,8 @@
   flex-grow: 1;
   flex-shrink: 1;
   padding: $gutter;
-  color: $brand-6;
+  transition: all 0.2s ease;
+  color: $brand-6-t;
   text-align: center;
   cursor: pointer;
 

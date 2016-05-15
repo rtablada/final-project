@@ -12,10 +12,11 @@
   margin: $gutter;
   padding: $gutter;
   border-radius: $brand-border-radius;
-  background: $user-card-bg;
+  background: $brand-6-t;
 
   &-text {
-    color: $user-card-txt;
+    color: $brand-2;
+    font-weight: 600;
   }
 }
 
@@ -24,10 +25,12 @@
   justify-content: flex-end;
   width: 100%;
   margin-top: $gutter;
-  color: $brand-important;
-  font-size: 0.6rem;
+  transition: all 0.2s ease;
+  color: $brand-1;
+  font-size: 0.8rem;
 
   &__text {
     margin-right: $gutter / 2;
+    color: $brand-1;
   }
 }
