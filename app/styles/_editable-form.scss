@@ -1,9 +1,15 @@
 .editable-form {
+  input, textarea {
+    width: 100%;
+    cursor: zoom-in;
+  }
+
   button {
     display: none;
   }
 
   textarea {
+    width: 100%;
     resize: none;
   }
 }
@@ -11,11 +17,12 @@
 .form-hidden {
   border: 0;
   background: none;
-  color: $brand-bluegrey;
   font-size: 1rem;
 
   &:focus {
     outline: none;
-    background: $brand-white;
+    background: $form-edit-bg;
+    color: $body-txt;
+    cursor: auto;
   }
 }

@@ -1,8 +1,5 @@
 <div class="main-content">
   <div class="container">
-    <div class="main-row__top">
-      <h4 class="greeting">{{model.name}}</h4>
-    </div>
 
     {{#if newItem}}
 
@@ -10,63 +7,98 @@
         {{#simple-form class="form-container" onsubmit=(action createNewItem) as |formValues|}}
           <p>
             <label>Image</label>
-            {{input class="form-input" type="text" name="image" value=formValues.image}}
+            {{input class="form-input" type="text" name="image" placeholder="Image URL" value=formValues.image}}
           </p>
+
           <p>
             <label>Title</label>
-            {{input class="form-input" type="text" name="title" value=formValues.title}}
+            {{input class="form-input" type="text" name="title" placeholder="Item Title" maxlength="25" value=formValues.title}}
           </p>
+
           <p>
             <label>Description</label>
-            {{textarea class="form-input" name="description" value=formValues.description}}
+            {{textarea class="form-input" name="description" placeholder="General Item Description" value=formValues.description}}
           </p>
+
           <p>
-            <label>Steps</label>
+            <label>How is the item prepared?</label>
             {{#add-array onadd=(action (mut formValues.steps)) as |step|}}
-              <li>{{input class="form-input" value=step.description}}</li>
+              <li class="item-step">{{input class="form-input" placeholder="After typing hit `enter` for a new line" value=step.description}}</li>
             {{/add-array}}
           </p>
-          <p>
-            {{!-- <label>Safe for Allergens:</label> --}}
 
-          </p>
           <div class="form-buttons">
-            <button type="button" {{action toggleProperty "newItem"}}>{{fa-icon "undo"}}</button>
-            <button>{{fa-icon "plus-square"}}</button>
+            <div class="nav-link__container">
+              <span class="nav-link__text">Cancel</span>
+              <span class="nav-link" {{action toggleProperty "newItem"}}>{{fa-icon "backward"}}</span>
+            </div>
+
+            <div class="nav-link__container">
+              <span class="nav-link__text">Add Menu</span>
+              <button class="nav-link">{{fa-icon "plus"}}</button>
+            </div>
           </div>
         {{/simple-form}}
       </div>
 
     {{else}}
 
-    <div class="main-row__top">
-      <span class="add-button" {{action toggleProperty "newItem"}}>{{fa-icon "plus-square"}}</span>
-      <span class="add-button">{{#link-to "admin.menus"}}{{fa-icon "undo"}}{{/link-to}}</span>
-    </div>
+      <div class="main-row__top">
+        <div class="nav-link__container">
+          <span class="nav-link__text">New Item</span>
+          <span class="nav-link" {{action toggleProperty "newItem"}}>{{fa-icon "plus"}}</span>
+        </div>
+
+        <div class="nav-link_container">
+          {{#simple-form class="editable-form" startingValues=model onsubmit=(action saveItem model) as |formValues|}}
+            {{input autoresize=true class="form-hidden menu-title" type="text" name="menu" value=formValues.name}}
+          {{/simple-form}}
+        </div>
+
+        <div class="nav-link__container">
+          <span class="nav-link__text">Back</span>
+          {{#link-to "admin.menus"}}<span class="nav-link">{{fa-icon "backward"}}</span>{{/link-to}}
+        </div>
+      </div>
+
       <ul class="menu-option__row">
         {{#each model.items as |item|}}
             <div class="menu-option">
 
               {{#simple-form class="editable-form" startingValues=item onsubmit=(action saveItem item) as |formValues|}}
                 <div class="image-title__container">
-                  <div class="menu-image__container">
-                    <img class="menu-image" src="{{item.image}}" alt="">
+                  <div class="item-image__container">
+                    <img class="item-image" src="{{item.image}}" alt="">
                   </div>
+
                   {{input class="form-hidden image-title__container--title" type="text" name="title" value=formValues.title}}
                 </div>
-                {{textarea autoresize=true class="form-hidden" type="text" name="description" value=formValues.description enter=(action saveItem item formValues.buffer)}}
+                <h3 class="item-description__title">Item Description</h3>
+                {{textarea autoresize=true class="form-hidden item-description" type="text" name="description" value=formValues.description enter=(action saveItem item formValues.buffer)}}
+
                 <button></button>
               {{/simple-form}}
 
-              {{#each item.steps as |step|}}
-                <li>{{step.description}}</li>
-                {{!-- <span class="delete"><a href="#" {{action deleteStep step}}>Delete step</a></span> --}}
-              {{/each}}
-              <span class="delete"><a href="#" {{action deleteItem item items.steps}}>Delete this item</a></span>
+              <h3 class="item-description__title">Preparation Steps:</h3>
+              <ol>
+                {{#each item.steps as |step|}}
+                  {{#simple-form class="editable-form" startingValues=step onsubmit=(action saveStep step) as |formValues|}}
+                    <li class="item-step">
+                      {{textarea autoresize=true class="form-hidden item-step__description" type="text" name="step" value=step.description}}
+                    </li>
+                  {{/simple-form}}
+                {{/each}}
+              </ol>
+
+              <div class="main-row__bottom">
+                <span class="delete-item" {{action deleteItem item items.steps}}>{{fa-icon "trash"}} Delete single item</span>
+              </div>
             </div>
         {{/each}}
       </ul>
-      <span class="delete"><a href="#" {{action deleteMenu model}}>Delete this entire menu!</a></span>
+      <div class="main-row__bottom">
+        <span class="delete-menu" {{action deleteMenu model}}>Delete this whole menu</span>
+      </div>
     {{/if}}
   </div>
 </div>

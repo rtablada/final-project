@@ -9,7 +9,6 @@
 @import 'forms';
 @import 'nav';
 @import 'main-content';
-@import 'login';
 @import 'editable-form';
 @import 'users';
 @import 'menu-list';
@@ -18,4 +17,6 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: url('/images/DSC_3020.jpg') no-repeat center center fixed;
+  background-size: cover;
 }

@@ -1,9 +1,13 @@
 nav {
   position: fixed;
   width: 100%;
-  background: $brand-bluegrey;
+  background: $brand-1;
   overflow: auto;
   z-index: 1;
+}
+
+.nav-container {
+  margin: 0 $gutter;
 }
 
 .nav-row {
@@ -12,19 +16,51 @@ nav {
   justify-content: space-between;
 }
 
+.fobie {
+  display: block;
+  margin: $gutter 0;
+  padding: 0 $gutter;
+  transition: all 0.2s ease;
+  color: $brand-3;
+  font-family: $brand-font;
+  font-size: 2rem;
+  font-weight: 900;
+
+  &:hover {
+    border-radius: $brand-border-radius;
+    background: $brand-3;
+    color: $brand-1;
+  }
+}
+
+.nav-link__group {
+  display: flex;
+}
+
+.greeting {
+  margin: 0 $gutter;
+  color: $brand-2;
+  font-family: $brand-font;
+}
+
 .nav-link__container {
   position: relative;
+  align-self: center;
 }
 
 .nav-link {
   display: block;
   position: relative;
   padding: $gutter;
-  color: $brand-lighgrey;
+  transition: all 0.2s ease;
+  border-bottom: transparent 6px solid;
+  color: $brand-6;
   font-size: $brand-icon-size;
+  cursor: pointer;
 
   &:hover {
-    color: $brand-yellow;
+    border-bottom: $brand-3 6px solid;
+    color: $brand-5;
   }
 }
 
@@ -32,20 +68,7 @@ nav {
   position: absolute;
   bottom: 10px;
   width: 100%;
-  color: $brand-green;
-  font-size: 0.6rem;
+  color: $brand-6;
+  font-size: 0.7rem;
   text-align: center;
-}
-
-.fobie {
-  display: block;
-  padding: $gutter;
-  color: $brand-green;
-  font-family: $brand-font;
-  font-size: 2rem;
-  font-weight: 900;
-
-  &:hover {
-    color: darken($brand-green, 10%);
-  }
 }

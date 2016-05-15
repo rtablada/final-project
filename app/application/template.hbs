@@ -1,26 +1,33 @@
 <div class="app-wrapper">
   <nav>
-    <div class="container">
+    <div class="nav-container">
       <div class="nav-row">
-        <span>{{#link-to "admin" class="nav-link"}}{{fa-icon "home"}}{{/link-to}}</span>
-
         <span>{{#link-to "admin" class="fobie"}}FOHBI{{/link-to}}</span>
 
-        {{#if session.isAuthenticated}}
-          <div class="nav-link__container">
-            {{#link-to "logout"}}
-              <span class="nav-link__text">Log Out</span>
-              <span class="nav-link">{{fa-icon "sign-out"}}</span>
-            {{/link-to}}
-          </div>
-        {{else}}
-          <div class="nav-link__container">
-            {{#link-to "login"}}
-              <span class="nav-link__text">Log In</span>
-              <span class="nav-link">{{fa-icon "sign-in"}}</span>
-            {{/link-to}}
-          </div>
-        {{/if}}
+        <div class="nav-link__group">
+          {{#if session.isAuthenticated}}
+
+            {{!-- <h4 class="greeting">
+              Hello, {{session.session.content.authenticated.user.username}}.
+            </h4> --}}
+
+            <div class="nav-link__container">
+              {{#link-to "admin"}}
+                <span class="nav-link__text">Home</span>
+                <span class="nav-link">{{fa-icon "home"}}</span>
+              {{/link-to}}
+            </div>
+
+            <div class="nav-link__container">
+              {{#link-to "logout"}}
+                <span class="nav-link__text">Log Out</span>
+                <span class="nav-link">{{fa-icon "sign-out"}}</span>
+              {{/link-to}}
+            </div>
+
+          {{/if}}
+        </div>
+
       </div>
     </div>
   </nav>

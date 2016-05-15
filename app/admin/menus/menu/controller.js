@@ -28,8 +28,14 @@ export default Ember.Controller.extend({
     item.save();
   },
 
+  saveStep(step, values) {
+    step.setProperties(values);
+    $(`.form-hidden`).blur();
+    step.save();
+  },
+
   deleteStep(step) {
-    if (confirm(`Remove this item?\nThere's no going back...`)) {
+    if (confirm(`Remove this step?\nThere's no going back...`)) {
       step.destroyRecord();
     }
   },
