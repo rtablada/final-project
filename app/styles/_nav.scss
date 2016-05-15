@@ -1,7 +1,7 @@
 nav {
   position: fixed;
   width: 100%;
-  background: $nav-bar-bg;
+  background: $brand-1;
   overflow: auto;
   z-index: 1;
 }
@@ -20,15 +20,15 @@ nav {
   display: block;
   padding: $gutter;
   border-bottom: transparent 6px solid;
-  color: $logo;
+  color: $brand-3;
   font-family: $brand-font;
   font-size: 2rem;
   font-weight: 900;
 
   &:hover {
-    border-bottom: $logo 6px solid;
-    background: $logo;
-    color: $nav-bar-bg;
+    border-bottom: $brand-3 6px solid;
+    background: $brand-3;
+    color: $brand-1;
   }
 }
 
@@ -38,7 +38,8 @@ nav {
 
 .greeting {
   margin: 0 $gutter;
-  color: $greeting;
+  color: $brand-2;
+  font-family: $brand-font;
 }
 
 .nav-link__container {
@@ -50,13 +51,13 @@ nav {
   position: relative;
   padding: $gutter;
   border-bottom: transparent 6px solid;
-  color: $nav-btn;
+  color: $brand-6;
   font-size: $brand-icon-size;
   cursor: pointer;
 
   &:hover {
-    border-bottom: $logo 6px solid;
-    color: $nav-btn-hover;
+    border-bottom: $brand-3 6px solid;
+    color: $brand-5;
   }
 }
 
@@ -64,7 +65,7 @@ nav {
   position: absolute;
   bottom: 10px;
   width: 100%;
-  color: $nav-btn-txt;
+  color: $brand-6;
   font-size: 0.6rem;
   text-align: center;
 }

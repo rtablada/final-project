@@ -7,9 +7,9 @@
         <div class="nav-link__group">
           {{#if session.isAuthenticated}}
 
-            <h4 class="greeting">
+            {{!-- <h4 class="greeting">
               Hello, {{session.session.content.authenticated.user.username}}.
-            </h4>
+            </h4> --}}
 
             <div class="nav-link__container">
               {{#link-to "admin"}}

@@ -1,41 +1,45 @@
-
-$brand-green: #3b795f;
-$brand-bluegrey: #333138;
-$brand-black: #000103;
-$brand-lighgrey: #515052;
-$brand-white: #fffffa;
-$brand-yellow: #d6da47;
-$brand-orange: #b55b43;
-
-
-
 $gutter: 1rem;
-$brand-trans-overlay: rgba(#000000, 0.85);
-$body-txt: #35404F;
 $brand-font: 'Exo 2', sans-serif;
 $brand-icon-size: 2rem;
 $brand-border-radius: 6px;
+
+$brand-trans-overlay: rgba(#000000, 0.85);
+$body-txt: #35404F;
 $brand-box-shadow: #000103;
 $brand-important: #E45F56;
 ////////////////////////////
 $nav-bar-bg: #35404F;
-$nav-btn: #fffffa;
+$nav-btn: #CED0CE;
 $nav-btn-hover: #fffffa;
-$nav-btn-txt: $brand-white;
+$nav-btn-txt: #fffffa;
 $logo: #E45F56;
 $logo-hover: #E45F56;
 $greeting: #E45F56;
 
-// #35404F
-// #4AAAA5
-// #7ACCC8
-// #A3D39C
-// #E45F56
+// $brand-1: #35404F;
+// $brand-2: #4AAAA5;
+// $brand-3: #7ACCC8;
+// $brand-4: #E45F56;
+// $brand-5: #fffffa;
+
+// $brand-1: #E45F56;
+// $brand-2: #252422;
+// $brand-3: #403D39;
+// $brand-4: #CCC5B9;
+// $brand-5: #FFFCF2;
+
+$brand-1: #686963;
+$brand-2: #3D5467;
+$brand-3: #8AA29E;
+$brand-4: #E45F56;
+$brand-5: #F1EDEE;
+$brand-6: #CCC5B9;
 
 $form-label: #E45F56;
 $form-border: #35404F;
 $form-glow: #fffffa;
 $form-step: #A3D39C;
+$form-edit-bg: #fffffa;
 
 $main-option: #fffffa;
 $main-option-hover: #E45F56;
