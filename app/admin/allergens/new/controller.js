@@ -6,6 +6,6 @@ export default Ember.Controller.extend({
 
     allergen.save().then(() => {
       this.transitionToRoute(`admin.allergens.index`);
-    })
+    });
   },
 });
