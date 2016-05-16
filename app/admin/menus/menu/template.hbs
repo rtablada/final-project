@@ -84,7 +84,7 @@
                 {{#each item.steps as |step|}}
                   {{#simple-form class="editable-form" startingValues=step onsubmit=(action saveStep step) as |formValues|}}
                     <li class="item-step">
-                      {{textarea autoresize=true class="form-hidden item-step__description" type="text" name="step" value=step.description enter=(action saveStep step formValues.buffer)}}
+                      {{textarea autoresize=true class="form-hidden item-step__description" type="text" name="step" value=formValues.description enter=(action saveStep step formValues.buffer)}}
                     </li>
                   {{/simple-form}}
                 {{/each}}

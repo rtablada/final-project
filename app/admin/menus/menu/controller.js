@@ -25,12 +25,18 @@ export default Ember.Controller.extend({
   saveItem(item, values) {
     item.setProperties(values);
     $(`.form-hidden`).blur();
+    values.description = values.description.trim();
+
+    item.setProperties(values);
     item.save();
   },
 
   saveStep(step, values) {
     step.setProperties(values);
     $(`.form-hidden`).blur();
+    values.description = values.description.trim();
+
+    step.setProperties(values);
     step.save();
   },
 
