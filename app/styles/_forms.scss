@@ -5,27 +5,23 @@
     margin: $gutter;
 
     label {
-      color: $brand-2;
-    }
-
-    button {
-      border: 0;
-      outline: none;
-      background: none;
-      font-size: $brand-icon-size;
-      cursor: pointer;
+      color: $brand-4;
+      font-size: 1.2rem;
     }
   }
 
   &-input {
     width: 100%;
-    margin: 0;
     padding: $gutter / 2;
     border: 1px solid $brand-2;
     background: transparent;
     color: $brand-5;
     font-size: 0.9rem;
     font-weight: 100;
+
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
 
     &:focus {
       outline: none;

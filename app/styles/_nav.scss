@@ -48,6 +48,15 @@ nav {
   align-self: center;
 }
 
+.nav-link__text {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  color: $brand-6;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
 .nav-link {
   display: block;
   position: relative;
@@ -62,13 +71,4 @@ nav {
     border-bottom: $brand-3 6px solid;
     color: $brand-5;
   }
-}
-
-.nav-link__text {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  color: $brand-6;
-  font-size: 0.7rem;
-  text-align: center;
 }
