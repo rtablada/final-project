@@ -4,19 +4,18 @@
       {{#simple-form class="form-container" onsubmit=(action loginUser) as |formValues|}}
         <p>
           <label>Email</label>
-          {{input class="form-input" type="text" name="email" placeholder="Email" maxlength="25" value=formValues.email}}
+          {{input class="form-input" type="text" name="email" placeholder="john@doe.com" maxlength="25" value=formValues.email}}
         </p>
         <p>
           <label>Password</label>
-          {{input class="form-input" type="password" name="password" placeholder="Password" maxlength="25" value=formValues.password}}
+          {{input class="form-input" type="password" name="password" placeholder="john123" maxlength="25" value=formValues.password}}
         </p>
         <div class="form-buttons">
           <div class="nav-link__container">
             <span class="nav-link__text">Login</span>
-            <span class="nav-link">{{fa-icon "sign-in"}}</span>
+            <button class="nav-link">{{fa-icon "sign-in"}}</button>
           </div>
         </div>
-        <button></button>
       {{/simple-form}}
     </div>
   </div>

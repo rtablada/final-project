@@ -7,30 +7,30 @@
         {{#simple-form class="form-container" onsubmit=(action createNewItem) as |formValues|}}
           <p>
             <label>Image</label>
-            {{input class="form-input" type="text" name="image" placeholder="Image URL" value=formValues.image}}
+            {{input class="form-input" type="file" name="image" placeholder="Upload image for this item" value=formValues.image}}
           </p>
 
           <p>
             <label>Title</label>
-            {{input class="form-input" type="text" name="title" placeholder="Item Title" maxlength="25" value=formValues.title}}
+            {{input class="form-input" type="text" name="title" placeholder="New item iitle" maxlength="25" value=formValues.title}}
           </p>
 
           <p>
             <label>Description</label>
-            {{textarea class="form-input" name="description" placeholder="General Item Description" value=formValues.description}}
+            {{textarea class="form-input" name="description" placeholder="General item description" value=formValues.description}}
           </p>
 
           <p>
             <label>How is the item prepared?</label>
             {{#add-array onadd=(action (mut formValues.steps)) as |step|}}
-              <li class="item-step">{{input class="form-input" placeholder="After typing hit `enter` for a new line" value=step.description}}</li>
+              <li class="item-step">{{input class="form-input" placeholder="Add another step using `enter` key" value=step.description}}</li>
             {{/add-array}}
           </p>
 
           <div class="form-buttons">
             <div class="nav-link__container">
               <span class="nav-link__text">Cancel</span>
-              <span class="nav-link" {{action toggleProperty "newItem"}}>{{fa-icon "backward"}}</span>
+              <button class="nav-link" {{action toggleProperty "newItem"}}>{{fa-icon "backward"}}</button>
             </div>
 
             <div class="nav-link__container">
@@ -84,7 +84,7 @@
                 {{#each item.steps as |step|}}
                   {{#simple-form class="editable-form" startingValues=step onsubmit=(action saveStep step) as |formValues|}}
                     <li class="item-step">
-                      {{textarea autoresize=true class="form-hidden item-step__description" type="text" name="step" value=step.description}}
+                      {{textarea autoresize=true class="form-hidden item-step__description" type="text" name="step" value=formValues.description enter=(action saveStep step formValues.buffer)}}
                     </li>
                   {{/simple-form}}
                 {{/each}}

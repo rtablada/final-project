@@ -6,12 +6,12 @@
         {{#simple-form class="form-container" onsubmit=(action createNewMenu) as |formValues|}}
           <p>
             <label>Menu Title</label>
-            {{input class="form-input" type="text" name="name" placeholder="New Menu Title (max length 25)" maxlength="25" value=formValues.name}}
+            {{input class="form-input" type="text" name="name" placeholder="New Menu Title" maxlength="25" value=formValues.name}}
           </p>
           <div class="form-buttons">
             <div class="nav-link__container">
               <span class="nav-link__text">Cancel</span>
-              <span class="nav-link" {{action toggleProperty "newMenu"}}>{{fa-icon "backward"}}</span>
+              <button class="nav-link" {{action toggleProperty "newMenu"}}>{{fa-icon "backward"}}</button>
             </div>
             <div class="nav-link__container">
               <span class="nav-link__text">Add Menu</span>
@@ -26,11 +26,11 @@
       <div class="main-row__top">
         <div class="nav-link__container">
           <span class="nav-link__text">New Menu</span>
-          <span class="nav-link" {{action toggleProperty "newMenu"}}>{{fa-icon "plus"}}</span>
+          <button class="nav-link" {{action toggleProperty "newMenu"}}>{{fa-icon "plus"}}</button>
         </div>
         <div class="nav-link__container">
           <span class="nav-link__text">Back</span>
-          {{#link-to "admin"}}<span class="nav-link">{{fa-icon "backward"}}</span>{{/link-to}}
+          {{#link-to "admin"}}<button class="nav-link">{{fa-icon "backward"}}</button>{{/link-to}}
         </div>
       </div>
 

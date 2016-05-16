@@ -25,12 +25,18 @@ export default Ember.Controller.extend({
   saveItem(item, values) {
     item.setProperties(values);
     $(`.form-hidden`).blur();
+    values.description = values.description.trim();
+
+    item.setProperties(values);
     item.save();
   },
 
   saveStep(step, values) {
     step.setProperties(values);
     $(`.form-hidden`).blur();
+    values.description = values.description.trim();
+
+    step.setProperties(values);
     step.save();
   },
 
@@ -52,9 +58,13 @@ export default Ember.Controller.extend({
 
   deleteMenu(menu) {
     if (confirm(`Delete this menu?\nThis will permanently delete this menu and ALL of it's contents.\nThere's no going back...`)) {
-      menu.destroyRecord()
-      .then(() => {
-        this.transitionToRoute(`admin.menus`);
+      Promise.all(menu.get(`items`).map((item) => {
+        return item.destroyRecord();
+      })).then(() => {
+        menu.destroyRecord()
+        .then(() => {
+          this.transitionToRoute(`admin.menus`);
+        });
       });
     }
   },
