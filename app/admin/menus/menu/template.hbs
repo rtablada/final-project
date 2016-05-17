@@ -6,14 +6,12 @@
       <div class="main-row">
         {{#simple-form class="form-container" onsubmit=(action createNewItem) as |formValues|}}
           <p>
-
+            <label>Upload Image</label>
             {{profile-upload
+              class="form-input image-uploader"
               fileUrl=formValues.image
-              placeholderUrl="profile.jpg"
+              placeholderUrl="images/img-icon.png"
               onchange=(action (mut formValues.image))}}
-
-            <label>Image</label>
-            {{input class="form-input" type="text" name="image" placeholder="Upload image for this item" value=formValues.image}}
           </p>
 
           <p>

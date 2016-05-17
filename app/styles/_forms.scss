@@ -19,10 +19,6 @@
     font-size: 0.9rem;
     font-weight: 100;
 
-    &::-webkit-file-upload-button {
-      visibility: hidden;
-    }
-
     &:focus {
       outline: none;
     }
@@ -31,5 +27,32 @@
   &-buttons {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.image-uploader {
+  button {
+    position: relative;
+    left: 50%;
+    padding: $gutter / 2 $gutter;
+    transform: translate(-50%);
+    border-radius: $brand-border-radius;
+    background: $brand-2;
+    color: $brand-5;
+    font-size: 0.9rem;
+    font-weight: 100;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  img {
+    width: 100%;
   }
 }
