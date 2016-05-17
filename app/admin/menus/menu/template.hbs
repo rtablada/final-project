@@ -98,8 +98,9 @@
                   {{/simple-form}}
                 {{/each}}
               </ol>
+              <h3 class="item-description__title">Safe for people with these allergens:</h3>
               {{#each item.allergens as |allergen|}}
-                <li class="item-step__description">{{allergen.name}}, </li>
+                <span class="item-step__description">{{allergen.name}}, </span>
               {{/each}}
 
               <div class="main-row__bottom">
