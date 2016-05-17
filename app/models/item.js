@@ -6,7 +6,9 @@ export default Model.extend({
   image: attr('string'),
   title: attr('string'),
   description: attr('string'),
+  allergens: attr('string'),
 
   steps: hasMany('step'),
+  allergens: hasMany('allergen'),
   menu: belongsTo('menu'),
 });

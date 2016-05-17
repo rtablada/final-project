@@ -3,9 +3,9 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   newItem: false,
 
-  createNewItem({ image, title, description, steps }) {
-    const item = this.store.createRecord(`item`, { image, title, description });
-    const menu = this.model;
+  createNewItem({ image, title, description, steps, allergens }) {
+    const item = this.store.createRecord(`item`, { image, title, description, allergens });
+    const menu = this.model.menu;
     item.set(`menu`, menu);
 
     item.save().then(() => {
@@ -46,20 +46,24 @@ export default Ember.Controller.extend({
     }
   },
 
+  deleteItemWithSteps(item) {
+    return Promise.all(item.get(`steps`).map((step) => {
+      return step.destroyRecord();
+    })).then(() => {
+      return item.destroyRecord();
+    });
+  },
+
   deleteItem(item) {
     if (confirm(`Remove this item?\nThere's no going back...`)) {
-      Promise.all(item.get(`steps`).map((step) => {
-        return step.destroyRecord();
-      })).then(() => {
-        item.destroyRecord();
-      });
+      this.deleteItemWithSteps(item);
     }
   },
 
   deleteMenu(menu) {
     if (confirm(`Delete this menu?\nThis will permanently delete this menu and ALL of it's contents.\nThere's no going back...`)) {
       Promise.all(menu.get(`items`).map((item) => {
-        return item.destroyRecord();
+        return this.deleteItemWithSteps(item);
       })).then(() => {
         menu.destroyRecord()
         .then(() => {
@@ -68,4 +72,18 @@ export default Ember.Controller.extend({
       });
     }
   },
+
+  toggleAllergen(update, allergens, allergen, isToggled) {
+    if (allergens === undefined) {
+      allergens = [];
+    }
+
+    if (isToggled) {
+      // Update to be allergens plus the current allergen
+      update([...allergens, allergen]);
+    } else {
+      // Filter out the current allergen from allergens
+      update(allergens.filter(curr => curr.id !== allergen.id));
+    }
+  }
 });

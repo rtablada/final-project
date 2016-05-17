@@ -2,6 +2,10 @@
 
 module.exports = function(environment) {
   var ENV = {
+    'ember-cli-toggle': {
+      includedThemes: ['light', 'default', 'flip', 'ios'],
+    },
+
     apiHost: 'http://localhost:3000',
 
     modulePrefix: 'final-project',
