@@ -1,4 +1,3 @@
-import Ember from 'ember';
+import CloudinaryProfileUpload from 'ember-profile-upload/services/cloudinary-profile-upload';
 
-export default Ember.Service.extend({
-});
+export default CloudinaryProfileUpload.extend();
