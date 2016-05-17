@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    apiHost: 'http://localhost:3000',
+    apiHost: 'https://fohbi.herokuapp.com',
 
     modulePrefix: 'final-project',
     environment: environment,

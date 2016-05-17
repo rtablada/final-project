@@ -1,11 +1,16 @@
-<h1>New Post</h1>
-<h1>New Post</h1>
-<h1>New Post</h1>
+<div class="main-content">
+  <div class="container">
 
-{{#simple-form onsubmit=(action saveAllergen) as |formValues|}}
-  {{input placeholder="URL" value=formValues.name}}
 
-  {{#link-to "admin.allergens.index"}}Cancel{{/link-to}}
+    {{#simple-form class="form-container" onsubmit=(action saveAllergen) as |formValues|}}
+      <label>New Allergen</label>
+      {{input class="form-input" placeholder="New Allergen" value=formValues.name}}
 
-  <button>Submit</button>
-{{/simple-form}}
+      <div class="nav-link__container">
+        <button type="button" class="nav-link">{{#link-to "admin.allergens.index"}}Cancel{{/link-to}}</button>
+
+        <button class="nav-link">Submit</button>
+      </div>
+    {{/simple-form}}
+  </div>
+</div>
