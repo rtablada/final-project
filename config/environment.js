@@ -5,8 +5,7 @@ module.exports = function(environment) {
     'ember-cli-toggle': {
       includedThemes: ['light', 'default', 'flip', 'ios'],
     },
-
-    apiHost: 'http://localhost:3000',
+    apiHost: 'https://fohbi.herokuapp.com',
 
     modulePrefix: 'final-project',
     environment: environment,
@@ -17,6 +16,11 @@ module.exports = function(environment) {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
+    },
+
+    cloudinary: {
+      cloudName: `dvxis3hbo`,
+      uploadPreset: `emberez`,
     },
 
     googleFonts: [

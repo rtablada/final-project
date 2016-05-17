@@ -5,8 +5,12 @@
       <div class="main-row">
         {{#simple-form class="form-container" onsubmit=(action createNewItem) as |formValues|}}
           <p>
-            <label>Image</label>
-            {{input class="form-input" type="text" name="image" placeholder="Upload image for this item" value=formValues.image}}
+            <label>Upload Image</label>
+            {{profile-upload
+              class="form-input image-uploader"
+              fileUrl=formValues.image
+              placeholderUrl="images/img-icon.png"
+              onchange=(action (mut formValues.image))}}
           </p>
 
           <p>
