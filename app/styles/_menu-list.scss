@@ -48,10 +48,14 @@
   width: 100%;
   height: 16rem;
   margin-bottom: -4px;
-  border: 2rem solid $brand-2-t;
+  transition: all 0.15s ease;
+  border: 0.8rem solid $brand-2-t;
   border-radius: $brand-border-radius;
   object-fit: cover;
-  // filter: opacity(50%);
+
+  &:hover {
+    border: 0.4rem solid $brand-2-t;
+  }
 }
 
 .item-description {

@@ -69,7 +69,7 @@
         {{#each model.items as |item|}}
             <div class="menu-option">
 
-              {{#simple-form class="editable-form" startingValues=item onsubmit=(action saveItem item) as |formValues|}}
+              {{#simple-form class="editable-form" startingValues=item onsubmit=(action saveItem item formValues.buffer) as |formValues|}}
                 <div class="image-title__container">
                   <div class="item-image__container">
                     <img class="item-image" src="{{item.image}}" alt="">
