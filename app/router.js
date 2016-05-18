@@ -9,9 +9,17 @@ Router.map(function() {
   this.route('logout');
   this.route('login');
 
-  this.route('admin', {
+  this.route('users', {
     path: '/',
   }, function () {
+    this.route('menus', function() {
+      this.route('menu', {
+        path: '/:menu_id'
+      });
+    });
+  });
+
+  this.route('admin', function () {
     this.route('users');
     this.route('menus', function() {
       this.route('menu', {

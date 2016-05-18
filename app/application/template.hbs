@@ -2,7 +2,7 @@
   <nav>
     <div class="nav-container">
       <div class="nav-row">
-        <span>{{#link-to "admin" class="fobie"}}FOHBI{{/link-to}}</span>
+        <span>{{#link-to "users" class="fobie"}}FOHBI{{/link-to}}</span>
 
         <div class="nav-link__group">
           {{#if session.isAuthenticated}}
@@ -12,7 +12,7 @@
             </h4> --}}
 
             <div class="nav-link__container">
-              {{#link-to "admin"}}
+              {{#link-to "users"}}
                 <span class="nav-link__text">Home</span>
                 <button class="nav-link">{{fa-icon "home"}}</button>
               {{/link-to}}

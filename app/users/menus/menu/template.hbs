@@ -1,0 +1,38 @@
+<div class="main-content">
+  <div class="container">
+
+      <div class="main-row__top">
+        <div class="nav-link__container">
+          <span class="nav-link__text">Back</span>
+          {{#link-to "users"}}<span class="nav-link">{{fa-icon "backward"}}</span>{{/link-to}}
+        </div>
+      </div>
+
+      <div class="menu-option__row">
+        {{#each model.items as |item|}}
+            <div class="menu-option">
+                <div class="image-title__container">
+                  <div class="item-image__container">
+                    <img class="item-image" src="{{item.image}}" alt="">
+                  </div>
+
+                  <span class="form-hidden image-title__container--title">{{item.title}}</span>
+                </div>
+
+                <h3 class="item-description__title">Item Description</h3>
+                <span class="form-hidden item-description">{{item.description}}</span>
+
+                <h3 class="item-description__title">Preparation Steps:</h3>
+                <ol>
+                  {{#each item.steps as |step|}}
+                      <li class="item-step">
+                        <span class="form-hidden item-step__description">{{item.description}}</span>
+                      </li>
+                  {{/each}}
+                </ol>
+            </div>
+        {{/each}}
+      </div>
+
+  </div>
+</div>
