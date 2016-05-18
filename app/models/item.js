@@ -9,6 +9,7 @@ export default Model.extend({
   allergens: attr('string'),
 
   steps: hasMany('step'),
-  allergens: hasMany('allergen'),
+  itemallergens: hasMany('itemallergen'),
+
   menu: belongsTo('menu'),
 });

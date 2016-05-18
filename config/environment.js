@@ -5,7 +5,8 @@ module.exports = function(environment) {
     'ember-cli-toggle': {
       includedThemes: ['light', 'default', 'flip', 'ios'],
     },
-    apiHost: 'https://fohbi.herokuapp.com',
+    // apiHost: 'https://fohbi.herokuapp.com',
+    apiHost: 'http://localhost:3000',
 
     modulePrefix: 'final-project',
     environment: environment,

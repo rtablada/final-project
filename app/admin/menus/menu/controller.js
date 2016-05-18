@@ -4,7 +4,8 @@ export default Ember.Controller.extend({
   newItem: false,
 
   createNewItem({ image, title, description, steps, allergens }) {
-    const item = this.store.createRecord(`item`, { image, title, description, allergens });
+    debugger;
+    const item = this.store.createRecord(`item`, { image, title, description });
     const menu = this.model.menu;
     item.set(`menu`, menu);
 
@@ -16,7 +17,14 @@ export default Ember.Controller.extend({
       });
       this.toggleProperty(`newItem`);
 
-      return Promise.all([...stepModels]);
+      const itemAllergens = allergens.map((allergen) => {
+        const throughModel = this.store.createRecord(`itemallergen`, { allergen, item });
+        debugger;
+
+        return throughModel.save();
+      });
+
+      return Promise.all([...stepModels, ...itemAllergens]);
     }).catch((err) => {
       console.log(err);
     });
